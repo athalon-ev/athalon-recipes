@@ -1,0 +1,27 @@
+{
+	"parent": "item/generated",
+	"textures": {
+        	"layer0": "item/rabbit_hide"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 30000}, "model": "item/rabbit_hide/30000" },
+		{ "predicate": { "custom_model_data": 30001}, "model": "item/rabbit_hide/30001" },
+		{ "predicate": { "custom_model_data": 30002}, "model": "item/rabbit_hide/30002" },
+		{ "predicate": { "custom_model_data": 30003}, "model": "item/rabbit_hide/30003" },
+		{ "predicate": { "custom_model_data": 30004}, "model": "item/rabbit_hide/30004" },
+		{ "predicate": { "custom_model_data": 30005}, "model": "item/rabbit_hide/30005" },
+		{ "predicate": { "custom_model_data": 30006}, "model": "item/rabbit_hide/30006" },
+		{ "predicate": { "custom_model_data": 30007}, "model": "item/rabbit_hide/30007" },
+		{ "predicate": { "custom_model_data": 30008}, "model": "item/rabbit_hide/30008" },
+		{ "predicate": { "custom_model_data": 30009}, "model": "item/rabbit_hide/30009" },
+		{ "predicate": { "custom_model_data": 30010}, "model": "item/rabbit_hide/30010" },
+		{ "predicate": { "custom_model_data": 30011}, "model": "item/rabbit_hide/30011" },
+		{ "predicate": { "custom_model_data": 30012}, "model": "item/rabbit_hide/30012" },
+		{ "predicate": { "custom_model_data": 30013}, "model": "item/rabbit_hide/30013" },
+		{ "predicate": { "custom_model_data": 30014}, "model": "item/rabbit_hide/30014" },
+		{ "predicate": { "custom_model_data": 30015}, "model": "item/rabbit_hide/30015" },
+		{ "predicate": { "custom_model_data": 30016}, "model": "item/rabbit_hide/30016" },
+		{ "predicate": { "custom_model_data": 30017}, "model": "item/rabbit_hide/30017" },
+		{ "predicate": { "custom_model_data": 30018}, "model": "item/rabbit_hide/30018" }		
+	]
+}

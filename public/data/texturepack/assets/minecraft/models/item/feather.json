@@ -1,0 +1,29 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/feather"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 30000}, "model": "item/feather/30000" },
+		{ "predicate": { "custom_model_data": 30001}, "model": "item/feather/30001" },
+		{ "predicate": { "custom_model_data": 30002}, "model": "item/feather/30002" },
+		{ "predicate": { "custom_model_data": 30003}, "model": "item/feather/30003" },
+		{ "predicate": { "custom_model_data": 30004}, "model": "item/feather/30004" },
+		{ "predicate": { "custom_model_data": 30100}, "model": "item/feather/30100" },
+		{ "predicate": { "custom_model_data": 30101}, "model": "item/feather/30101" },
+		{ "predicate": { "custom_model_data": 30102}, "model": "item/feather/30102" },
+		{ "predicate": { "custom_model_data": 30103}, "model": "item/feather/30103" },
+		{ "predicate": { "custom_model_data": 30104}, "model": "item/feather/30104" },
+		{ "predicate": { "custom_model_data": 30200}, "model": "item/feather/30200" },
+		{ "predicate": { "custom_model_data": 30201}, "model": "item/feather/30201" },
+		{ "predicate": { "custom_model_data": 30202}, "model": "item/feather/30202" },
+		{ "predicate": { "custom_model_data": 30203}, "model": "item/feather/30203" },
+		{ "predicate": { "custom_model_data": 30204}, "model": "item/feather/30204" },
+		{ "predicate": { "custom_model_data": 31000}, "model": "item/feather/31000" },
+		{ "predicate": { "custom_model_data": 60003}, "model": "item/feather/60003" },
+		{ "predicate": { "custom_model_data": 60004}, "model": "item/feather/60004" },
+		{ "predicate": { "custom_model_data": 60005}, "model": "item/feather/60005" },
+		{ "predicate": { "custom_model_data": 60006}, "model": "item/feather/60006" },
+		{ "predicate": { "custom_model_data": 60007}, "model": "item/feather/60007" }
+	]
+}

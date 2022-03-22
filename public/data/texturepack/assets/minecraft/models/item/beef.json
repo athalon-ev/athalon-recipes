@@ -1,0 +1,9 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/beef"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 20000}, "model": "item/beef/20000" }
+	]
+}

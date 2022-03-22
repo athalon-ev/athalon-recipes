@@ -1,0 +1,11 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "item/iron_shovel"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 1}, "model": "item/iron_shovel/1" },
+		{ "predicate": { "custom_model_data": 10000}, "model": "item/iron_shovel/10000" },
+		{ "predicate": { "custom_model_data": 10001}, "model": "item/iron_shovel/10001" }
+	]
+}

@@ -1,0 +1,24 @@
+{
+    "parent": "block/carpet",
+    "textures": {
+        "particle": "block/white_wool",
+        "wool": "block/white_wool"
+    },
+	"overrides": [
+		{ "predicate": { "custom_model_data": 30000}, "model": "item/white_carpet/30000" },
+		{ "predicate": { "custom_model_data": 40000}, "model": "item/white_carpet/40000" },
+		{ "predicate": { "custom_model_data": 50000}, "model": "item/white_carpet/50000" },
+		{ "predicate": { "custom_model_data": 50001}, "model": "item/white_carpet/50001" },
+		{ "predicate": { "custom_model_data": 50002}, "model": "item/white_carpet/50002" },
+		{ "predicate": { "custom_model_data": 50003}, "model": "item/white_carpet/50003" },
+		{ "predicate": { "custom_model_data": 50004}, "model": "item/white_carpet/50004" },
+		{ "predicate": { "custom_model_data": 50005}, "model": "item/white_carpet/50005" },
+		{ "predicate": { "custom_model_data": 50006}, "model": "item/white_carpet/50006" },
+		{ "predicate": { "custom_model_data": 50007}, "model": "item/white_carpet/50007" },
+		{ "predicate": { "custom_model_data": 50008}, "model": "item/white_carpet/50008" },
+		{ "predicate": { "custom_model_data": 50009}, "model": "item/white_carpet/50009" },
+		{ "predicate": { "custom_model_data": 50010}, "model": "item/white_carpet/50010" },
+		{ "predicate": { "custom_model_data": 50011}, "model": "item/white_carpet/50011" },
+		{ "predicate": { "custom_model_data": 50012}, "model": "item/white_carpet/50012" }
+	]
+}

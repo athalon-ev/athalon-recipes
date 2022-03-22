@@ -1,0 +1,12 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/arrow"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 10000}, "model": "item/arrow/10000" },
+		{ "predicate": { "custom_model_data": 10001}, "model": "item/arrow/10001" },
+		{ "predicate": { "custom_model_data": 10002}, "model": "item/arrow/10002" },
+		{ "predicate": { "custom_model_data": 10003}, "model": "item/arrow/10003" }
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/bread"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 1}, "model": "item/bread/1" },
+		{ "predicate": { "custom_model_data": 10000}, "model": "item/bread/10000" },
+		{ "predicate": { "custom_model_data": 10001}, "model": "item/bread/10001" },
+		{ "predicate": { "custom_model_data": 10002}, "model": "item/bread/10002" }
+	]
+}

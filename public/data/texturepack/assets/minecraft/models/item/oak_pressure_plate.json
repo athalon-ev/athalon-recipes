@@ -1,0 +1,6 @@
+{
+    "parent": "block/oak_pressure_plate",
+	"overrides": [
+		{ "predicate": { "custom_model_data": 20000}, "model": "item/oak_pressure_plate/20000" }
+	]
+}

@@ -1,0 +1,10 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/nautilus_shell"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 10000}, "model": "item/nautilus_shell/10000" },
+		{ "predicate": { "custom_model_data": 10001}, "model": "item/nautilus_shell/10001" }
+	]
+}

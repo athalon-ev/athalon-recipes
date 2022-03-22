@@ -1,0 +1,38 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/mushroom_stew"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 1}, "model": "item/mushroom_stew/1" },
+		{ "predicate": { "custom_model_data": 30000}, "model": "item/mushroom_stew/30000" },
+		{ "predicate": { "custom_model_data": 30001}, "model": "item/mushroom_stew/30001" },
+		{ "predicate": { "custom_model_data": 30002}, "model": "item/mushroom_stew/30002" },
+		{ "predicate": { "custom_model_data": 30003}, "model": "item/mushroom_stew/30003" },
+		{ "predicate": { "custom_model_data": 30004}, "model": "item/mushroom_stew/30004" },
+		{ "predicate": { "custom_model_data": 30005}, "model": "item/mushroom_stew/30005" },
+		{ "predicate": { "custom_model_data": 30006}, "model": "item/mushroom_stew/30006" },
+		{ "predicate": { "custom_model_data": 30007}, "model": "item/mushroom_stew/30007" },
+		{ "predicate": { "custom_model_data": 30008}, "model": "item/mushroom_stew/30008" },
+		{ "predicate": { "custom_model_data": 30009}, "model": "item/mushroom_stew/30009" },
+		{ "predicate": { "custom_model_data": 30010}, "model": "item/mushroom_stew/30010" },
+		{ "predicate": { "custom_model_data": 30011}, "model": "item/mushroom_stew/30011" },
+		{ "predicate": { "custom_model_data": 30012}, "model": "item/mushroom_stew/30012" },
+		{ "predicate": { "custom_model_data": 30013}, "model": "item/mushroom_stew/30013" },
+		{ "predicate": { "custom_model_data": 30014}, "model": "item/mushroom_stew/30014" },
+		{ "predicate": { "custom_model_data": 30015}, "model": "item/mushroom_stew/30015" },
+		{ "predicate": { "custom_model_data": 30016}, "model": "item/mushroom_stew/30016" },
+		{ "predicate": { "custom_model_data": 30017}, "model": "item/mushroom_stew/30017" },
+		{ "predicate": { "custom_model_data": 30018}, "model": "item/mushroom_stew/30018" },
+		{ "predicate": { "custom_model_data": 30019}, "model": "item/mushroom_stew/30019" },
+		{ "predicate": { "custom_model_data": 30020}, "model": "item/mushroom_stew/30020" },
+		{ "predicate": { "custom_model_data": 30021}, "model": "item/mushroom_stew/30021" },
+		{ "predicate": { "custom_model_data": 30022}, "model": "item/mushroom_stew/30022" },
+		{ "predicate": { "custom_model_data": 30023}, "model": "item/mushroom_stew/30023" },
+		{ "predicate": { "custom_model_data": 30024}, "model": "item/mushroom_stew/30024" },
+		{ "predicate": { "custom_model_data": 30025}, "model": "item/mushroom_stew/30025" },
+		{ "predicate": { "custom_model_data": 30026}, "model": "item/mushroom_stew/30026" },
+		{ "predicate": { "custom_model_data": 30027}, "model": "item/mushroom_stew/30027" },
+		{ "predicate": { "custom_model_data": 40000}, "model": "item/mushroom_stew/40000" }
+	]
+}

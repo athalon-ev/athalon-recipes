@@ -1,0 +1,31 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/glass_bottle"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 1}, "model": "item/glass_bottle/1" },
+		{ "predicate": { "custom_model_data": 10000}, "model": "item/glass_bottle/10000" },
+		{ "predicate": { "custom_model_data": 10001}, "model": "item/glass_bottle/10001" },
+		{ "predicate": { "custom_model_data": 10002}, "model": "item/glass_bottle/10002" },
+		{ "predicate": { "custom_model_data": 10003}, "model": "item/glass_bottle/10003" },
+		{ "predicate": { "custom_model_data": 10004}, "model": "item/glass_bottle/10004" },
+		{ "predicate": { "custom_model_data": 10005}, "model": "item/glass_bottle/10005" },
+		{ "predicate": { "custom_model_data": 10006}, "model": "item/glass_bottle/10006" },
+		{ "predicate": { "custom_model_data": 20000}, "model": "item/glass_bottle/20000" },
+		{ "predicate": { "custom_model_data": 30000}, "model": "item/glass_bottle/30000" },
+		{ "predicate": { "custom_model_data": 30001}, "model": "item/glass_bottle/30001" },
+		{ "predicate": { "custom_model_data": 30002}, "model": "item/glass_bottle/30002" },
+		{ "predicate": { "custom_model_data": 30003}, "model": "item/glass_bottle/30003" },
+		{ "predicate": { "custom_model_data": 30004}, "model": "item/glass_bottle/30004" },
+		{ "predicate": { "custom_model_data": 30005}, "model": "item/glass_bottle/30005" },
+		{ "predicate": { "custom_model_data": 30006}, "model": "item/glass_bottle/30006" },
+		{ "predicate": { "custom_model_data": 30007}, "model": "item/glass_bottle/30007" },
+		{ "predicate": { "custom_model_data": 30008}, "model": "item/glass_bottle/30008" },
+		{ "predicate": { "custom_model_data": 30009}, "model": "item/glass_bottle/30009" },
+		{ "predicate": { "custom_model_data": 30010}, "model": "item/glass_bottle/30010" },
+		{ "predicate": { "custom_model_data": 30011}, "model": "item/glass_bottle/30011" },
+		{ "predicate": { "custom_model_data": 30012}, "model": "item/glass_bottle/30012" },
+		{ "predicate": { "custom_model_data": 30013}, "model": "item/glass_bottle/30013" }
+	]
+}

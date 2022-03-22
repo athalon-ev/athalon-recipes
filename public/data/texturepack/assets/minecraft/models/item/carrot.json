@@ -1,0 +1,22 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/carrot"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 10000}, "model": "item/carrot/10000" },
+		{ "predicate": { "custom_model_data": 10001}, "model": "item/carrot/10001" },
+		{ "predicate": { "custom_model_data": 30000}, "model": "item/carrot/30000" },
+		{ "predicate": { "custom_model_data": 30001}, "model": "item/carrot/30001" },
+		{ "predicate": { "custom_model_data": 30002}, "model": "item/carrot/30002" },
+		{ "predicate": { "custom_model_data": 40000}, "model": "item/carrot/40000" },
+		{ "predicate": { "custom_model_data": 40001}, "model": "item/carrot/40001" },
+		{ "predicate": { "custom_model_data": 40002}, "model": "item/carrot/40002" },
+		{ "predicate": { "custom_model_data": 40003}, "model": "item/carrot/40003" },
+		{ "predicate": { "custom_model_data": 40004}, "model": "item/carrot/40004" },
+		{ "predicate": { "custom_model_data": 40005}, "model": "item/carrot/40005" },
+		{ "predicate": { "custom_model_data": 40006}, "model": "item/carrot/40006" },
+		{ "predicate": { "custom_model_data": 40007}, "model": "item/carrot/40007" },
+		{ "predicate": { "custom_model_data": 40008}, "model": "item/carrot/40008" }
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/melon_slice"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 10000}, "model": "item/melon_slice/10000" },
+		{ "predicate": { "custom_model_data": 10001}, "model": "item/melon_slice/10001" },
+		{ "predicate": { "custom_model_data": 10002}, "model": "item/melon_slice/10002" },
+		{ "predicate": { "custom_model_data": 10003}, "model": "item/melon_slice/10003" },
+		{ "predicate": { "custom_model_data": 10004}, "model": "item/melon_slice/10004" },
+		{ "predicate": { "custom_model_data": 10005}, "model": "item/melon_slice/10005" },
+		{ "predicate": { "custom_model_data": 10006}, "model": "item/melon_slice/10006" },
+		{ "predicate": { "custom_model_data": 10007}, "model": "item/melon_slice/10007" },
+		{ "predicate": { "custom_model_data": 10008}, "model": "item/melon_slice/10008" },
+		{ "predicate": { "custom_model_data": 10009}, "model": "item/melon_slice/10009" },
+		{ "predicate": { "custom_model_data": 10010}, "model": "item/melon_slice/10010" },
+		{ "predicate": { "custom_model_data": 10011}, "model": "item/melon_slice/10011" },
+		{ "predicate": { "custom_model_data": 10012}, "model": "item/melon_slice/10012" },
+		{ "predicate": { "custom_model_data": 10013}, "model": "item/melon_slice/10013" }
+	]
+}

@@ -1,0 +1,39 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/writable_book"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 30000}, "model": "item/written_book/30000" },
+		{ "predicate": { "custom_model_data": 30001}, "model": "item/written_book/30001" },
+		{ "predicate": { "custom_model_data": 30002}, "model": "item/written_book/30002" },
+		{ "predicate": { "custom_model_data": 30003}, "model": "item/written_book/30003" },
+		{ "predicate": { "custom_model_data": 30004}, "model": "item/written_book/30004" },
+		{ "predicate": { "custom_model_data": 30005}, "model": "item/written_book/30005" },
+		{ "predicate": { "custom_model_data": 30006}, "model": "item/written_book/30006" },
+		{ "predicate": { "custom_model_data": 30007}, "model": "item/written_book/30007" },
+		{ "predicate": { "custom_model_data": 30008}, "model": "item/written_book/30008" },
+		{ "predicate": { "custom_model_data": 30009}, "model": "item/written_book/30009" },
+		{ "predicate": { "custom_model_data": 30010}, "model": "item/written_book/30010" },
+		{ "predicate": { "custom_model_data": 30011}, "model": "item/written_book/30011" },
+		{ "predicate": { "custom_model_data": 40000}, "model": "item/written_book/40000" },
+		{ "predicate": { "custom_model_data": 40001}, "model": "item/written_book/40001" },
+		{ "predicate": { "custom_model_data": 40002}, "model": "item/written_book/40002" },
+		{ "predicate": { "custom_model_data": 40003}, "model": "item/written_book/40003" },
+		{ "predicate": { "custom_model_data": 50000}, "model": "item/written_book/50000" },
+		{ "predicate": { "custom_model_data": 50001}, "model": "item/written_book/50001" },
+		{ "predicate": { "custom_model_data": 50002}, "model": "item/written_book/50002" },
+		{ "predicate": { "custom_model_data": 50003}, "model": "item/written_book/50003" },
+		{ "predicate": { "custom_model_data": 50004}, "model": "item/written_book/50004" },
+		{ "predicate": { "custom_model_data": 50005}, "model": "item/written_book/50005" },
+		{ "predicate": { "custom_model_data": 50006}, "model": "item/written_book/50006" },
+		{ "predicate": { "custom_model_data": 50007}, "model": "item/written_book/50007" },
+		{ "predicate": { "custom_model_data": 50008}, "model": "item/written_book/50008" },
+		{ "predicate": { "custom_model_data": 50009}, "model": "item/written_book/50009" },
+		{ "predicate": { "custom_model_data": 50010}, "model": "item/written_book/50010" },
+		{ "predicate": { "custom_model_data": 50011}, "model": "item/written_book/50011" },
+		{ "predicate": { "custom_model_data": 50012}, "model": "item/written_book/50012" },
+		{ "predicate": { "custom_model_data": 50013}, "model": "item/written_book/50013" },
+		{ "predicate": { "custom_model_data": 50014}, "model": "item/written_book/50014" }
+	]
+}

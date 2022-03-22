@@ -1,0 +1,15 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/cooked_chicken"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 10000}, "model": "item/cooked_chicken/10000" },
+		{ "predicate": { "custom_model_data": 10001}, "model": "item/cooked_chicken/10001" },
+		{ "predicate": { "custom_model_data": 10002}, "model": "item/cooked_chicken/10002" },
+		{ "predicate": { "custom_model_data": 10003}, "model": "item/cooked_chicken/10003" },
+		{ "predicate": { "custom_model_data": 10004}, "model": "item/cooked_chicken/10004" },
+		{ "predicate": { "custom_model_data": 10005}, "model": "item/cooked_chicken/10005" },
+		{ "predicate": { "custom_model_data": 10006}, "model": "item/cooked_chicken/10006" }
+	]
+}

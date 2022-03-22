@@ -1,0 +1,11 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/name_tag"
+    },
+	"overrides": [
+		{ "predicate": { "custom_model_data": 20000}, "model": "item/name_tag/20000" },
+		{ "predicate": { "custom_model_data": 20001}, "model": "item/name_tag/20001" },
+		{ "predicate": { "custom_model_data": 20002}, "model": "item/name_tag/20002" }
+	]
+}

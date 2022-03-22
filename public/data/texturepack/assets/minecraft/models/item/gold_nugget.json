@@ -1,0 +1,43 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/gold_nugget"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 1}, "model": "item/gold_nugget/1" },
+		{ "predicate": { "custom_model_data": 30000}, "model": "item/gold_nugget/30000" },
+		{ "predicate": { "custom_model_data": 30001}, "model": "item/gold_nugget/30001" },
+		{ "predicate": { "custom_model_data": 30002}, "model": "item/gold_nugget/30002" },
+		{ "predicate": { "custom_model_data": 30003}, "model": "item/gold_nugget/30003" },
+		{ "predicate": { "custom_model_data": 30004}, "model": "item/gold_nugget/30004" },
+		{ "predicate": { "custom_model_data": 30005}, "model": "item/gold_nugget/30005" },
+		{ "predicate": { "custom_model_data": 30006}, "model": "item/gold_nugget/30006" },
+		{ "predicate": { "custom_model_data": 30007}, "model": "item/gold_nugget/30007" },
+		{ "predicate": { "custom_model_data": 30008}, "model": "item/gold_nugget/30008" },
+		{ "predicate": { "custom_model_data": 30009}, "model": "item/gold_nugget/30009" },
+		{ "predicate": { "custom_model_data": 30010}, "model": "item/gold_nugget/30010" },
+		{ "predicate": { "custom_model_data": 30011}, "model": "item/gold_nugget/30011" },
+		{ "predicate": { "custom_model_data": 30012}, "model": "item/gold_nugget/30012" },
+		{ "predicate": { "custom_model_data": 30013}, "model": "item/gold_nugget/30013" },
+		{ "predicate": { "custom_model_data": 30014}, "model": "item/gold_nugget/30014" },
+		{ "predicate": { "custom_model_data": 30015}, "model": "item/gold_nugget/30015" },
+		{ "predicate": { "custom_model_data": 30016}, "model": "item/gold_nugget/30016" },
+		{ "predicate": { "custom_model_data": 30017}, "model": "item/gold_nugget/30017" },
+		{ "predicate": { "custom_model_data": 30018}, "model": "item/gold_nugget/30018" },
+		{ "predicate": { "custom_model_data": 30019}, "model": "item/gold_nugget/30019" },
+		{ "predicate": { "custom_model_data": 30020}, "model": "item/gold_nugget/30020" },
+		{ "predicate": { "custom_model_data": 30021}, "model": "item/gold_nugget/30021" },
+		{ "predicate": { "custom_model_data": 30022}, "model": "item/gold_nugget/30022" },
+		{ "predicate": { "custom_model_data": 30023}, "model": "item/gold_nugget/30023" },
+		{ "predicate": { "custom_model_data": 30024}, "model": "item/gold_nugget/30024" },
+		{ "predicate": { "custom_model_data": 30025}, "model": "item/gold_nugget/30025" },
+		{ "predicate": { "custom_model_data": 30026}, "model": "item/gold_nugget/30026" },
+		{ "predicate": { "custom_model_data": 30027}, "model": "item/gold_nugget/30027" },
+		{ "predicate": { "custom_model_data": 40000}, "model": "item/gold_nugget/40000" },
+		{ "predicate": { "custom_model_data": 40001}, "model": "item/gold_nugget/40001" },
+		{ "predicate": { "custom_model_data": 40002}, "model": "item/gold_nugget/40002" },
+		{ "predicate": { "custom_model_data": 40003}, "model": "item/gold_nugget/40003" },
+		{ "predicate": { "custom_model_data": 40004}, "model": "item/gold_nugget/40004" },
+		{ "predicate": { "custom_model_data": 50000}, "model": "item/gold_nugget/50000" }
+	]
+}

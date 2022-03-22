@@ -1,0 +1,7 @@
+{
+    "parent": "item/template_skull",
+	"overrides": [
+		{ "predicate": { "custom_model_data": 1}, "model": "item/customblocks/head_items" },
+		{ "predicate": { "custom_model_data": 2}, "model": "item/customblocks/head_blocks" }
+	]
+}

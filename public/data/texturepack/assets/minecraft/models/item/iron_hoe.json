@@ -1,0 +1,22 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "item/iron_hoe"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 1}, "model": "item/iron_hoe/1" },
+		{ "predicate": { "custom_model_data": 10000}, "model": "item/iron_hoe/10000" },
+		{ "predicate": { "custom_model_data": 10001}, "model": "item/iron_hoe/10001" },
+		{ "predicate": { "custom_model_data": 10002}, "model": "item/iron_hoe/10002" },
+		{ "predicate": { "custom_model_data": 10003}, "model": "item/iron_hoe/10003" },
+		{ "predicate": { "custom_model_data": 10004}, "model": "item/iron_hoe/10004" },
+		{ "predicate": { "custom_model_data": 10005}, "model": "item/iron_hoe/10005" },
+		{ "predicate": { "custom_model_data": 10006}, "model": "item/iron_hoe/10006" },
+		{ "predicate": { "custom_model_data": 10007}, "model": "item/iron_hoe/10007" },
+		{ "predicate": { "custom_model_data": 10008}, "model": "item/iron_hoe/10008" },
+		{ "predicate": { "custom_model_data": 10009}, "model": "item/iron_hoe/10009" },
+		{ "predicate": { "custom_model_data": 10010}, "model": "item/iron_hoe/10010" },
+		{ "predicate": { "custom_model_data": 10011}, "model": "item/iron_hoe/10011" },
+		{ "predicate": { "custom_model_data": 10012}, "model": "item/iron_hoe/10012" }
+	]
+}

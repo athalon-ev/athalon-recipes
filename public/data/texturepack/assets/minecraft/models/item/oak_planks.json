@@ -1,0 +1,20 @@
+{
+    "parent": "block/oak_planks",
+	"overrides": [
+		{ "predicate": { "custom_model_data": 20000}, "model": "item/oak_planks/20000" },
+		{ "predicate": { "custom_model_data": 20001}, "model": "item/oak_planks/20001" },
+		{ "predicate": { "custom_model_data": 20002}, "model": "item/oak_planks/20002" },
+		{ "predicate": { "custom_model_data": 20003}, "model": "item/oak_planks/20003" },
+		{ "predicate": { "custom_model_data": 20004}, "model": "item/oak_planks/20004" },
+		{ "predicate": { "custom_model_data": 20005}, "model": "item/oak_planks/20005" },
+		{ "predicate": { "custom_model_data": 20006}, "model": "item/oak_planks/20006" },
+		{ "predicate": { "custom_model_data": 20007}, "model": "item/oak_planks/20007" },
+		{ "predicate": { "custom_model_data": 20008}, "model": "item/oak_planks/20008" },
+		{ "predicate": { "custom_model_data": 30000}, "model": "item/oak_planks/30000" },
+		{ "predicate": { "custom_model_data": 30001}, "model": "item/oak_planks/30001" },
+		{ "predicate": { "custom_model_data": 30002}, "model": "item/oak_planks/30002" },
+		{ "predicate": { "custom_model_data": 30003}, "model": "item/oak_planks/30003" },
+		{ "predicate": { "custom_model_data": 40000}, "model": "item/oak_planks/40000" },
+		{ "predicate": { "custom_model_data": 40001}, "model": "item/oak_planks/40001" }
+	]
+}

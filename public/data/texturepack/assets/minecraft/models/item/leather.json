@@ -1,0 +1,25 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/leather"
+    },
+	"overrides": [
+		{ "predicate": { "custom_model_data": 20000}, "model": "item/leather/20000" },
+		{ "predicate": { "custom_model_data": 20001}, "model": "item/leather/20001" },
+		{ "predicate": { "custom_model_data": 20002}, "model": "item/leather/20002" },
+		{ "predicate": { "custom_model_data": 20003}, "model": "item/leather/20003" },
+		{ "predicate": { "custom_model_data": 30000}, "model": "item/leather/30000" },
+		{ "predicate": { "custom_model_data": 30001}, "model": "item/leather/30001" },
+		{ "predicate": { "custom_model_data": 30002}, "model": "item/leather/30002" },
+		{ "predicate": { "custom_model_data": 30003}, "model": "item/leather/30003" },
+		{ "predicate": { "custom_model_data": 30004}, "model": "item/leather/30004" },
+		{ "predicate": { "custom_model_data": 30005}, "model": "item/leather/30005" },
+		{ "predicate": { "custom_model_data": 30006}, "model": "item/leather/30006" },
+		{ "predicate": { "custom_model_data": 30007}, "model": "item/leather/30007" },
+		{ "predicate": { "custom_model_data": 40000}, "model": "item/leather/40000" },
+		{ "predicate": { "custom_model_data": 40001}, "model": "item/leather/40001" },
+		{ "predicate": { "custom_model_data": 40002}, "model": "item/leather/40002" },
+		{ "predicate": { "custom_model_data": 50000}, "model": "item/leather/50000" },
+		{ "predicate": { "custom_model_data": 50001}, "model": "item/leather/50001" }
+	]
+}

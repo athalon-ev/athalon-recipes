@@ -1,0 +1,20 @@
+{
+	"parent": "item/template_shulker_box",
+	"textures": {
+		"particle": "block/brown_shulker_box"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 10000}, "model": "item/brown_shulker_box/10000" },
+		{ "predicate": { "custom_model_data": 10001}, "model": "item/brown_shulker_box/10001" },
+		{ "predicate": { "custom_model_data": 10002}, "model": "item/brown_shulker_box/10002" },
+		{ "predicate": { "custom_model_data": 10003}, "model": "item/brown_shulker_box/10003" },
+		{ "predicate": { "custom_model_data": 10004}, "model": "item/brown_shulker_box/10004" },
+		{ "predicate": { "custom_model_data": 10005}, "model": "item/brown_shulker_box/10005" },
+		{ "predicate": { "custom_model_data": 10006}, "model": "item/brown_shulker_box/10006" },
+		{ "predicate": { "custom_model_data": 10007}, "model": "item/brown_shulker_box/10007" },
+		{ "predicate": { "custom_model_data": 10008}, "model": "item/brown_shulker_box/10008" },
+		{ "predicate": { "custom_model_data": 10009}, "model": "item/brown_shulker_box/10009" },
+		{ "predicate": { "custom_model_data": 10010}, "model": "item/brown_shulker_box/10010" },
+		{ "predicate": { "custom_model_data": 30000}, "model": "item/brown_shulker_box/30000" }
+	]
+}

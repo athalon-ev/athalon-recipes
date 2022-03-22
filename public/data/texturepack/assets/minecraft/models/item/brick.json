@@ -1,0 +1,15 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/brick"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 20000}, "model": "item/brick/20000" },
+		{ "predicate": { "custom_model_data": 30000}, "model": "item/brick/30000" },
+		{ "predicate": { "custom_model_data": 30000}, "model": "item/brick/30000" },
+		{ "predicate": { "custom_model_data": 30001}, "model": "item/brick/30001" },
+		{ "predicate": { "custom_model_data": 30002}, "model": "item/brick/30002" },
+		{ "predicate": { "custom_model_data": 30003}, "model": "item/brick/30003" },
+		{ "predicate": { "custom_model_data": 30004}, "model": "item/brick/30004" }
+	]
+}

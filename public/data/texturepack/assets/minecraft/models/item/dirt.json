@@ -1,0 +1,17 @@
+{
+    "parent": "block/dirt",
+	"overrides": [
+		{ "predicate": { "custom_model_data": 10000}, "model": "item/dirt/10000" },
+		{ "predicate": { "custom_model_data": 10001}, "model": "item/dirt/10001" },
+		{ "predicate": { "custom_model_data": 10002}, "model": "item/dirt/10002" },
+		{ "predicate": { "custom_model_data": 10003}, "model": "item/dirt/10003" },
+		{ "predicate": { "custom_model_data": 10004}, "model": "item/dirt/10004" },
+		{ "predicate": { "custom_model_data": 10005}, "model": "item/dirt/10005" },
+		{ "predicate": { "custom_model_data": 10006}, "model": "item/dirt/10006" },
+		{ "predicate": { "custom_model_data": 10007}, "model": "item/dirt/10007" },
+		{ "predicate": { "custom_model_data": 10008}, "model": "item/dirt/10008" },
+		{ "predicate": { "custom_model_data": 10009}, "model": "item/dirt/10009" },
+		{ "predicate": { "custom_model_data": 10010}, "model": "item/dirt/10010" },
+		{ "predicate": { "custom_model_data": 10011}, "model": "item/dirt/10011" }
+	]
+}
