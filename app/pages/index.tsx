@@ -74,11 +74,12 @@ const translateColor = (colorCode, string) => `
 `
 const translateColorCode = (colorCode) => colorCodeMap.get(colorCode) || "White"
 interface ItemDisplayProps {
-	item: IndexedDenizenScript
-	hideText: boolean
+	item: IndexedDenizenScript | undefined
+	hideText?: boolean
 }
 
 const ItemDisplay = ({ item, hideText }: ItemDisplayProps) => {
+	if (!item) return <></>
 	return (
 		<Tooltip
 			withArrow

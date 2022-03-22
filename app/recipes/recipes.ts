@@ -49,6 +49,7 @@ const getItemPicturePath = (itemFolderPath: string, item: DenizenScript) =>
 		`${item.material}${item.custom_model_data ? `/${item.custom_model_data}` : ""}.png`
 	)
 
+// @ts-ignore
 const parseDenizenRecipe = (recipe: DenizenUnparsedRecipe): DenizenRecipe => ({
 	...recipe,
 	...parseDenizenRecipeInput(recipe),

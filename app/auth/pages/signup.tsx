@@ -3,13 +3,13 @@ import Layout from "app/core/layouts/Layout"
 import { SignupForm } from "app/auth/components/SignupForm"
 
 const SignupPage: BlitzPage = () => {
-  const router = useRouter()
+	const router = useRouter()
 
-  return (
-    <div>
-      <SignupForm onSuccess={() => router.push(Routes.Home())} />
-    </div>
-  )
+	return (
+		<div>
+			<SignupForm onSuccess={() => router.push(Routes.Home())} />
+		</div>
+	)
 }
 
 SignupPage.redirectAuthenticatedTo = "/"
