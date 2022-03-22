@@ -8,6 +8,7 @@ import getItems from 'app/recipes/queries/getItems'
 import logout from 'app/auth/mutations/logout'
 import { DenizenRecipe, IndexedDenizenScript } from 'app/recipes/types'
 import { Tooltip } from '@mantine/core'
+import { useHash } from '@mantine/hooks'
 
 const UserInfo = () => {
 	const currentUser = useCurrentUser()
@@ -122,9 +123,9 @@ const Recipe = (props: RecipeProps) => {
 			<div className="flex bg-gray-400 justify-start">
 				<div className="flex flex-wrap">
 					{inputs.map((input, id) => (
-						<div className="w-1/3 p-2" key={id}>
+						<a href={`#${findItem(input)?.id}`} className="w-1/3 p-2" key={id}>
 							{findItem(input) && <ItemDisplay hideText item={findItem(input)} />}
-						</div>
+						</a>
 					))}
 				</div>
 			</div>
@@ -134,13 +135,14 @@ const Recipe = (props: RecipeProps) => {
 
 const RecipeList = () => {
 	const [items] = useQuery(getItems, null)
-
+	const [hash] = useHash()
 	return (
 		<div className="flex flex-wrap">
 			{items.map((item) => {
 				return (
-					<div className="p-4 w-1/4" key={item.id}>
-						<div className="bg-gray-300 p-4 rounded">
+					<div className="p-4 w-1/4" key={item.id} id={item.id}>
+						{item.id}
+						<div className={`${hash.replace('#', '') == item.id ? 'bg-blue-400' : 'bg-gray-300'} p-4 rounded`}>
 							<ItemDisplay item={item} />
 							{item.recipes.map((recipe, id) => (
 								<div key={id}>

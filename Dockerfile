@@ -16,4 +16,4 @@ EXPOSE 3000
 # RUN apk add --no-cache tini
 # ENTRYPOINT ["/sbin/tini", "--"]
 
-CMD ["./node_modules/.bin/blitz", "start", "--production"]
+CMD ["./node_modules/.bin/blitz", "start"]
