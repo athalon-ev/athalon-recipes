@@ -1,21 +1,21 @@
 export interface DenizenUnparsedRecipeShapeless {
-	type: "shapeless"
+	type: 'shapeless'
 	input: string
 }
 
 export interface DenizenUnparsedRecipeShaped {
-	type: "shaped"
+	type: 'shaped'
 	input: string[]
 }
 
 export interface DenizenUnparsedRecipeFurnace {
-	type: "furnace"
+	type: 'furnace'
 	cook_time: string
 	input: string
 }
 
 export interface DenizenUnparsedRecipeStonecutting {
-	type: "stonecutting"
+	type: 'stonecutting'
 	input: string
 }
 
@@ -28,23 +28,23 @@ export type DenizenUnparsedRecipe =
 	  })
 
 export interface DenizenRecipeShapeless {
-	type: "shapeless"
+	type: 'shapeless'
 	input: string[]
 }
 
 export interface DenizenRecipeShaped {
-	type: "shaped"
+	type: 'shaped'
 	input: string[][]
 }
 
 export interface DenizenRecipeFurnace {
-	type: "furnace"
+	type: 'furnace'
 	cook_time: string
 	input: string
 }
 
 export interface DenizenRecipeStonecutting {
-	type: "stonecutting"
+	type: 'stonecutting'
 	input: string
 }
 
@@ -61,12 +61,12 @@ export type DenizenRecipe = (
 }
 
 export interface DenizenScriptBase {
-	type: "item"
+	type: 'item'
 	color: string
 	no_id?: boolean
 	material: string
 	mechanisms: any
-	"display name": string
+	'display name': string
 	lore: string
 	custom_model_data: string
 	recipes: Record<string, any>

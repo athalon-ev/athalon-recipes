@@ -1,26 +1,26 @@
-import * as fs from "fs/promises"
-import * as yaml from "yaml"
-import * as path from "path"
+import * as fs from 'fs/promises'
+import * as yaml from 'yaml'
+import * as path from 'path'
 import type {
 	DenizenUnparsedScript,
 	DenizenScript,
 	DenizenUnparsedRecipe,
 	DenizenRecipe,
 	IndexedDenizenScript,
-} from "./types"
+} from './types'
 
 const parseDenizenScriptMaterial = (material: string): Partial<DenizenScript> => {
 	if (!material) return {}
 	const propertyString = material.match(/.*\[(.*)\]/)
 	if (!propertyString) return {}
 	// @ts-ignore
-	const rawProperties = Object.fromEntries(propertyString[1].split(";").map((p) => p.split("=")))
+	const rawProperties = Object.fromEntries(propertyString[1].split(';').map((p) => p.split('=')))
 	const { display, lore, ...properties } = rawProperties
 	return {
-		material: material.split("[")[0],
+		material: material.split('[')[0],
 		...properties,
-		...(display ? { "display name": display } : {}),
-		...(lore ? { lore: lore.split("li@el@").filter(String) } : {}),
+		...(display ? { 'display name': display } : {}),
+		...(lore ? { lore: lore.split('li@el@').filter(String) } : {}),
 	}
 }
 
@@ -33,12 +33,12 @@ const parseDenizenScript = (script: DenizenUnparsedScript): DenizenScript => {
 	}
 }
 
-const craftingSeparator = "|"
+const craftingSeparator = '|'
 
 const parseDenizenRecipeInput = (recipe: DenizenUnparsedRecipe) => {
-	if (recipe.type == "shapeless")
+	if (recipe.type == 'shapeless')
 		return { ...recipe, input: recipe.input.split(craftingSeparator) }
-	if (recipe.type == "shaped")
+	if (recipe.type == 'shaped')
 		return { ...recipe, input: recipe.input.map((i) => i.split(craftingSeparator)) }
 	return { ...recipe, input: recipe.input }
 }
@@ -46,7 +46,7 @@ const parseDenizenRecipeInput = (recipe: DenizenUnparsedRecipe) => {
 const getItemPicturePath = (itemFolderPath: string, item: DenizenScript) =>
 	path.join(
 		itemFolderPath,
-		`${item.material}${item.custom_model_data ? `/${item.custom_model_data}` : ""}.png`
+		`${item.material}${item.custom_model_data ? `/${item.custom_model_data}` : ''}.png`
 	)
 
 // @ts-ignore
@@ -73,8 +73,8 @@ export const getItemsByRecipeInput = (
 	items: Record<string, DenizenScript>,
 	recipe: DenizenRecipe
 ) => {
-	if (recipe.type == "shapeless") return recipe.input.map((item) => items[item])
-	if (recipe.type == "shaped") return recipe.input.map((list) => list.map((item) => items[item]))
+	if (recipe.type == 'shapeless') return recipe.input.map((item) => items[item])
+	if (recipe.type == 'shaped') return recipe.input.map((list) => list.map((item) => items[item]))
 	return items[recipe.input]
 }
 
@@ -92,7 +92,7 @@ const listAllFiles = async (dir: string) => {
 const readAllFiles = async (folderpath: string) => {
 	const paths = await listAllFiles(folderpath)
 	return await Promise.all(
-		paths.filter((p) => p.endsWith(".dsc")).map((p) => fs.readFile(p, "utf-8"))
+		paths.filter((p) => p.endsWith('.dsc')).map((p) => fs.readFile(p, 'utf-8'))
 	)
 }
 

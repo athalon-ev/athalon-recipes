@@ -1,4 +1,4 @@
-import "app/core/styles/index.css"
+import 'app/core/styles/index.css'
 import {
 	AppProps,
 	ErrorBoundary,
@@ -7,17 +7,17 @@ import {
 	ErrorFallbackProps,
 	useQueryErrorResetBoundary,
 	Head,
-} from "blitz"
-import { MantineProvider, MantineThemeOverride } from "@mantine/core"
-import { NotificationsProvider } from "@mantine/notifications"
-import LoginForm from "app/auth/components/LoginForm"
-import favicon from "public/favicon.png"
-import Layout from "app/core/layouts/Layout"
-import Error from "app/core/components/Error"
-import { useLocalStorageValue } from "@mantine/hooks"
+} from 'blitz'
+import { MantineProvider, MantineThemeOverride } from '@mantine/core'
+import { NotificationsProvider } from '@mantine/notifications'
+import LoginForm from 'app/auth/components/LoginForm'
+import favicon from 'public/favicon.png'
+import Layout from 'app/core/layouts/Layout'
+import Error from 'app/core/components/Error'
+import { useLocalStorageValue } from '@mantine/hooks'
 
 const theme: MantineThemeOverride = {
-	primaryColor: "indigo",
+	primaryColor: 'indigo',
 	fontSizes: {
 		xl: 40,
 	},
@@ -25,8 +25,8 @@ const theme: MantineThemeOverride = {
 
 export default function App({ Component, pageProps }: AppProps) {
 	const [colorScheme, setColorScheme] = useLocalStorageValue({
-		key: "colorScheme",
-		defaultValue: "light" as "light" | "dark",
+		key: 'colorScheme',
+		defaultValue: 'light' as 'light' | 'dark',
 	})
 	const getLayout = Component.getLayout || ((page) => page)
 	return (
@@ -55,8 +55,8 @@ export default function App({ Component, pageProps }: AppProps) {
 
 function RootErrorFallback({ error, resetErrorBoundary }: ErrorFallbackProps) {
 	const [colorScheme, setColorScheme] = useLocalStorageValue({
-		key: "colorScheme",
-		defaultValue: "light" as "light" | "dark",
+		key: 'colorScheme',
+		defaultValue: 'light' as 'light' | 'dark',
 	})
 	if (error instanceof AuthenticationError) {
 		return (

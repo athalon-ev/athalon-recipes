@@ -1,13 +1,13 @@
-import { Suspense } from "react"
-import { Link, BlitzPage, useMutation, Routes } from "blitz"
-import Layout from "app/core/layouts/Layout"
-import { useCurrentUser } from "app/core/hooks/useCurrentUser"
-import { useQuery, Image } from "blitz"
-import getItems from "app/recipes/queries/getItems"
+import { Suspense } from 'react'
+import { Link, BlitzPage, useMutation, Routes } from 'blitz'
+import Layout from 'app/core/layouts/Layout'
+import { useCurrentUser } from 'app/core/hooks/useCurrentUser'
+import { useQuery, Image } from 'blitz'
+import getItems from 'app/recipes/queries/getItems'
 
-import logout from "app/auth/mutations/logout"
-import { DenizenRecipe, IndexedDenizenScript } from "app/recipes/types"
-import { Tooltip } from "@mantine/core"
+import logout from 'app/auth/mutations/logout'
+import { DenizenRecipe, IndexedDenizenScript } from 'app/recipes/types'
+import { Tooltip } from '@mantine/core'
 
 const UserInfo = () => {
 	const currentUser = useCurrentUser()
@@ -50,29 +50,29 @@ const UserInfo = () => {
 }
 
 const colorCodeMap = new Map([
-	["0", "Black"],
-	["1", "Blue"],
-	["2", "Green"],
-	["3", "DarkCyan"],
-	["4", "Red"],
-	["5", "Purple"],
-	["6", "Gold"],
-	["7", "DarkGray"],
-	["8", "Gray"],
-	["9", "LightBlue"],
-	["a", "LightGreen"],
-	["b", "Cyan"],
-	["c", "Salmon"],
-	["d", "Magenta"],
-	["e", "Yellow"],
-	["f", "White"],
+	['0', 'Black'],
+	['1', 'Blue'],
+	['2', 'Green'],
+	['3', 'DarkCyan'],
+	['4', 'Red'],
+	['5', 'Purple'],
+	['6', 'Gold'],
+	['7', 'DarkGray'],
+	['8', 'Gray'],
+	['9', 'LightBlue'],
+	['a', 'LightGreen'],
+	['b', 'Cyan'],
+	['c', 'Salmon'],
+	['d', 'Magenta'],
+	['e', 'Yellow'],
+	['f', 'White'],
 ])
 const translateColor = (colorCode, string) => `
     <span style="color:${translateColorCode(colorCode)}">
-            ${string.replace(/ /g, "&nbsp;")}
+            ${string.replace(/ /g, '&nbsp;')}
     </span>
 `
-const translateColorCode = (colorCode) => colorCodeMap.get(colorCode) || "White"
+const translateColorCode = (colorCode) => colorCodeMap.get(colorCode) || 'White'
 interface ItemDisplayProps {
 	item: IndexedDenizenScript | undefined
 	hideText?: boolean
@@ -88,7 +88,7 @@ const ItemDisplay = ({ item, hideText }: ItemDisplayProps) => {
 			placement="start"
 			label={
 				<>
-					{hideText && <span className="ml-2">{item["display name"]}</span>}
+					{hideText && <span className="ml-2">{item['display name']}</span>}
 					<pre dangerouslySetInnerHTML={{ __html: item.lore }} />
 				</>
 			}
@@ -96,12 +96,12 @@ const ItemDisplay = ({ item, hideText }: ItemDisplayProps) => {
 			<div className="rounded-md border-2 border-purple-800 bg-gray-900 p-2 text-white">
 				<Image
 					src={item.filepath}
-					alt={item["display name"]}
+					alt={item['display name']}
 					width={16}
 					height={16}
 					layout="fixed"
 				/>
-				{hideText || <span className="ml-2">{item["display name"]}</span>}
+				{hideText || <span className="ml-2">{item['display name']}</span>}
 			</div>
 		</Tooltip>
 	)
@@ -160,7 +160,7 @@ const Home: BlitzPage = () => {
 	return (
 		<div className="container">
 			<main>
-				<div className="buttons" style={{ marginTop: "1rem", marginBottom: "1rem" }}>
+				<div className="buttons" style={{ marginTop: '1rem', marginBottom: '1rem' }}>
 					<Suspense fallback="Loading...">
 						<RecipeList />
 					</Suspense>

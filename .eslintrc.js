@@ -1,9 +1,9 @@
 module.exports = {
-	extends: ["blitz"],
+	extends: ['blitz'],
 	rules: {
-		indent: ["error", "tab"],
-		"no-tabs": "off",
-		semi: "off",
-		quotes: [2, "single"],
+		indent: ['error', 'tab'],
+		'no-tabs': 'off',
+		semi: 'off',
+		quotes: [2, 'single'],
 	},
 }

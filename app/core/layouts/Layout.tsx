@@ -1,12 +1,12 @@
-import { Container } from "@mantine/core"
-import { Head, BlitzLayout } from "blitz"
+import { Container } from '@mantine/core'
+import { Head, BlitzLayout } from 'blitz'
 
 const Layout: BlitzLayout<{ title?: string }> = ({ title, children }) => {
 	return (
 		<>
 			<Head>
 				<title>
-					{title} {title ? "-" : ""} Athalon Rezepte
+					{title} {title ? '-' : ''} Athalon Rezepte
 				</title>
 				<link rel="icon" href="/favicon.png" />
 			</Head>

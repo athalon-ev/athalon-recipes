@@ -1,4 +1,4 @@
-import { z } from "zod"
+import { z } from 'zod'
 
 export const email = z
 	.string()
@@ -32,8 +32,8 @@ export const ResetPassword = z
 		token: z.string(),
 	})
 	.refine((data) => data.password === data.passwordConfirmation, {
-		message: "Passwords don't match",
-		path: ["passwordConfirmation"], // set the path of the error
+		message: 'Passwords don\'t match',
+		path: ['passwordConfirmation'], // set the path of the error
 	})
 
 export const ChangePassword = z.object({
