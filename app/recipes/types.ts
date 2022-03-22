@@ -62,10 +62,12 @@ export type DenizenRecipe = (
 
 export interface DenizenScriptBase {
 	type: "item"
+	color: string
 	no_id?: boolean
 	material: string
 	mechanisms: any
 	"display name": string
+	lore: string
 	custom_model_data: string
 	recipes: Record<string, any>
 }
