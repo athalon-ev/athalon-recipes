@@ -94,7 +94,7 @@ interface ItemDisplayProps {
 const ItemDisplay = ({ item, hideText }: ItemDisplayProps) => {
 	if (!item) return <></>
 	const name = renderMinecraftStringToHtml(typeof item['display name'] == 'string' ? item['display name'] :  '')
-	const lore = (item.lore || []).map(renderMinecraftStringToHtml).join('<br />')
+	const lore = (typeof item.lore == 'string' ? item.lore.split('\n') : item.lore || []).map(renderMinecraftStringToHtml).join('<br />')
 	return (
 		<Tooltip
 			withArrow
