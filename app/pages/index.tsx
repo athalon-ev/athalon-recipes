@@ -51,23 +51,35 @@ const UserInfo = () => {
 }
 
 const colorCodeMap = new Map([
-	['0', 'Black'],
-	['1', 'Blue'],
-	['2', 'Green'],
-	['3', 'DarkCyan'],
-	['4', 'Red'],
-	['5', 'Purple'],
-	['6', 'Gold'],
-	['7', 'DarkGray'],
-	['8', 'Gray'],
-	['9', 'LightBlue'],
-	['a', 'LightGreen'],
-	['b', 'Cyan'],
-	['c', 'Salmon'],
-	['d', 'Magenta'],
-	['e', 'Yellow'],
-	['f', 'White'],
+	['0', '#000000'],
+	['1', '#0000AA'],
+	['2', '#00AA00'],
+	['3', '#00AAAA'],
+	['4', '#AA0000'],
+	['5', '#AA00AA'],
+	['6', '#FFAA00'],
+	['7', '#AAAAAA'],
+	['8', '#555555'],
+	['9', '#5555FF'],
+	['a', '#55FF55'],
+	['b', '#55FFFF'],
+	['c', '#FF5555'],
+	['d', '#FF55FF'],
+	['e', '#FFFF55'],
+	['f', '#FFFFFF'],
 ])
+
+const renderMinecraftStringToHtml = (name: string) => name
+	.replaceAll('<yellow>', '<&e>')
+	.replaceAll('<dark_gray>', '<&8>')
+	.replaceAll('<dark_red>', '<&4>')
+	.replaceAll('&lb', '[')
+	.replaceAll('&rb', ']')
+	.replaceAll(/\n/g, '<br />')
+	.split(/<&/)
+	.map(element => translateColor(element.substring(0, 1), element.slice(2)))
+	.join('')
+
 const translateColor = (colorCode, string) => `
     <span style="color:${translateColorCode(colorCode)}">
             ${string.replace(/ /g, '&nbsp;')}
@@ -81,6 +93,8 @@ interface ItemDisplayProps {
 
 const ItemDisplay = ({ item, hideText }: ItemDisplayProps) => {
 	if (!item) return <></>
+	const name = renderMinecraftStringToHtml(typeof item['display name'] == 'string' ? item['display name'] :  '')
+	const lore = (item.lore || []).map(renderMinecraftStringToHtml).join('<br />')
 	return (
 		<Tooltip
 			withArrow
@@ -89,8 +103,8 @@ const ItemDisplay = ({ item, hideText }: ItemDisplayProps) => {
 			placement="start"
 			label={
 				<>
-					{hideText && <span className="ml-2">{item['display name']}</span>}
-					<pre dangerouslySetInnerHTML={{ __html: item.lore }} />
+					{hideText && <span className="ml-2" dangerouslySetInnerHTML={{ __html: name }} />}
+					<div dangerouslySetInnerHTML={{ __html: lore }} />
 				</>
 			}
 		>
@@ -102,7 +116,7 @@ const ItemDisplay = ({ item, hideText }: ItemDisplayProps) => {
 					height={16}
 					layout="fixed"
 				/>
-				{hideText || <span className="ml-2">{item['display name']}</span>}
+				{hideText || <span className="ml-2" dangerouslySetInnerHTML={{ __html: name }} />}
 			</div>
 		</Tooltip>
 	)
@@ -117,7 +131,7 @@ const Recipe = (props: RecipeProps) => {
 	const inputs = Array.isArray(props.recipe.input) ? props.recipe.input : [props.recipe.input]
 	const findItem = (itemId: string) => props.items.find((item) => item.id === itemId)
 	return (
-		<div className="p-4">
+		<div>
 			{/* <div className="text-xl">{(props.recipe.recipe_id || '').replaceAll('_', ' ')}</div> */}
 			{/* <div className="text-xl">{(props.recipe.recipe_id || '')}</div> */}
 			<div className="flex bg-gray-400 justify-start">
@@ -133,27 +147,53 @@ const Recipe = (props: RecipeProps) => {
 	)
 }
 
-const RecipeList = () => {
-	const [items] = useQuery(getItems, null)
+interface ItemCardProps {
+	items: IndexedDenizenScript[]
+	item: IndexedDenizenScript
+}
+
+const ItemCard = ({ item, items }: ItemCardProps) => {
 	const [hash] = useHash()
 	return (
-		<div className="flex flex-wrap">
-			{items.map((item) => {
-				return (
-					<div className="p-4 w-1/4" key={item.id} id={item.id}>
-						{item.id}
-						<div className={`${hash.replace('#', '') == item.id ? 'bg-blue-400' : 'bg-gray-300'} p-4 rounded`}>
-							<ItemDisplay item={item} />
-							{item.recipes.map((recipe, id) => (
-								<div key={id}>
-									Rezept {id + 1}:{recipe.type}
-									<Recipe items={items} recipe={recipe} />
-								</div>
-							))}
-						</div>
+		<div className="p-4 w-1/4" id={item.id}>
+			{item.id}
+			<div className={`${hash.replace('#', '') == item.id ? 'bg-blue-400' : 'bg-gray-300'} p-4 rounded`}>
+				<ItemDisplay item={item} />
+				{item.recipes.map((recipe, id) => (
+					<div key={id}>
+						Rezept {id + 1}:{recipe.type}
+						<Recipe items={items} recipe={recipe} />
 					</div>
-				)
-			})}
+				))}
+			</div>
+		</div>
+	)
+}
+
+const RecipeList = () => {
+	const [items] = useQuery(getItems, null)
+	const itemCategories = [...new Set(items.map(item => item.id.split('_')[0] || 'uncategorized'))]
+	const itemsWithCategories = items.map(item => ({
+		...item,
+		category: item.id.split('_')[0] || 'uncategorized',
+	}))
+	return (
+		<div>
+			<div className="flex m-4">
+				{itemCategories.map(itemCategory => (
+					<a className="mr-2 px-2 py-1 rounded hover:bg-blue-600" key={itemCategory} href={`#${itemCategory}`}>
+						{itemCategory}
+					</a>
+				))}
+			</div>
+			{itemCategories.map(itemCategory => (
+				<div key={itemCategory} id={itemCategory}>
+					<h2 className="text-xl m-4">{itemCategory} - {itemsWithCategories.filter(item => item.category == itemCategory).length} Rezepte </h2>
+					<div className="flex flex-wrap">
+						{itemsWithCategories.filter(item => item.category == itemCategory).sort((a,b) => a.id.localeCompare(b.id)).map((item) => <ItemCard key={item.id} item={item} items={items} />)}
+					</div>
+				</div>
+			))}
 		</div>
 	)
 }
