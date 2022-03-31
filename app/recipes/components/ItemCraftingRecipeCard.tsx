@@ -1,4 +1,5 @@
 import { useHash } from '@mantine/hooks'
+import { IndexedDenizenScript } from '../types'
 import ItemDisplay from './ItemDisplay'
 import Recipe from './Recipe'
 
