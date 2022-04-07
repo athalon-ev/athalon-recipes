@@ -26,6 +26,9 @@ const renderMinecraftStringToHtml = (name: string) =>
 		.replaceAll('<yellow>', '<&e>')
 		.replaceAll('<dark_gray>', '<&8>')
 		.replaceAll('<dark_red>', '<&4>')
+		.replaceAll('<red>', '<&c>')
+		.replaceAll('<gold>', '<&6>')
+		.replaceAll('<gray>', '<&7>')
 		.replaceAll('&lb', '[')
 		.replaceAll('&rb', ']')
 		.replaceAll(/\n/g, '<br />')
@@ -42,10 +45,11 @@ const translateColorCode = (colorCode) => colorCodeMap.get(colorCode) || 'White'
 
 interface ItemDisplayProps {
 	item: IndexedDenizenScript | undefined
-	hideText?: boolean
+	hideName?: boolean
+	hideLore?: boolean
 }
 
-const ItemDisplay = ({ item, hideText }: ItemDisplayProps) => {
+const ItemDisplay = ({ item, hideName, hideLore }: ItemDisplayProps) => {
 	if (!item) return <></>
 	const name = renderMinecraftStringToHtml(
 		typeof item['display name'] == 'string' ? item['display name'] : ''
@@ -61,7 +65,7 @@ const ItemDisplay = ({ item, hideText }: ItemDisplayProps) => {
 			placement="start"
 			label={
 				<>
-					{hideText && (
+					{hideName && (
 						<span className="ml-2" dangerouslySetInnerHTML={{ __html: name }} />
 					)}
 					<div dangerouslySetInnerHTML={{ __html: lore }} />
@@ -76,7 +80,8 @@ const ItemDisplay = ({ item, hideText }: ItemDisplayProps) => {
 					height={16}
 					layout="fixed"
 				/>
-				{hideText || <span className="ml-2" dangerouslySetInnerHTML={{ __html: name }} />}
+				{hideName || <span className="ml-2" dangerouslySetInnerHTML={{ __html: name }} />}
+				{hideLore || <div dangerouslySetInnerHTML={{ __html: lore }} />}
 			</div>
 		</Tooltip>
 	)

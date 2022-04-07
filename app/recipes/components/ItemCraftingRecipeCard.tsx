@@ -12,11 +12,9 @@ const ItemCraftingRecipeCard = ({ item, items }: ItemCraftingRecipeCardProps) =>
 	const [hash] = useHash()
 	return (
 		<div className="p-4 w-1/4" id={item.id}>
-			{item.id}
+			{item.id.replaceAll('_', ' ').split(' ').slice(1).join(' ')}
 			<div
-				className={`${
-					hash.replace('#', '') == item.id ? 'bg-blue-400' : 'bg-gray-300'
-				} p-4 rounded`}
+				className={`${hash.replace('#', '') == item.id ? 'bg-blue-400' : 'bg-gray-300'} p-4 rounded`}
 			>
 				<ItemDisplay item={item} />
 				{item.recipes.map((recipe, id) => (

@@ -51,15 +51,9 @@ const RecipeList = () => {
 
 const Home: BlitzPage = () => {
 	return (
-		<div className="container">
-			<main>
-				<div className="buttons" style={{ marginTop: '1rem', marginBottom: '1rem' }}>
-					<Suspense fallback="Loading...">
-						<RecipeList />
-					</Suspense>
-				</div>
-			</main>
-		</div>
+		<Suspense fallback="Loading...">
+			<RecipeList />
+		</Suspense>
 	)
 }
 
