@@ -1,0 +1,92 @@
+{
+	"credit": "Made by Benedikt Drexelius",
+	"textures": {
+		"0": "item/paper/20002/0"
+	},
+	"elements": [
+		{
+			"from": [0.5, 0.3, 5],
+			"to": [7.5, 0.31, 10],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8.5, 0.5, 6.5]},
+			"faces": {
+				"up": {"uv": [9, 10, 16, 15], "texture": "#0"},
+				"down": {"uv": [9, 10, 16, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [9, 0.1, 8],
+			"to": [16, 0.11, 13],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8.5, 0.5, 6.5]},
+			"faces": {
+				"up": {"uv": [9, 5, 16, 10], "texture": "#0"},
+				"down": {"uv": [9, 15, 16, 10], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6.5, 0, 2],
+			"to": [13.5, 1.01, 7],
+			"faces": {
+				"north": {"uv": [9, 15, 16, 16], "texture": "#0"},
+				"east": {"uv": [9, 15, 14, 16], "texture": "#0"},
+				"south": {"uv": [9, 15, 16, 16], "texture": "#0"},
+				"west": {"uv": [9, 15, 14, 16], "texture": "#0"},
+				"up": {"uv": [9, 10, 16, 15], "texture": "#0"},
+				"down": {"uv": [9, 10, 16, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7, 1, 1.5],
+			"to": [14, 2.01, 6.5],
+			"faces": {
+				"north": {"uv": [9, 15, 16, 16], "texture": "#0"},
+				"east": {"uv": [9, 15, 14, 16], "texture": "#0"},
+				"south": {"uv": [9, 15, 16, 16], "texture": "#0"},
+				"west": {"uv": [9, 15, 14, 16], "texture": "#0"},
+				"up": {"uv": [9, 10, 16, 15], "texture": "#0"},
+				"down": {"uv": [9, 10, 16, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7, 1.5, 1],
+			"to": [14, 1.51, 6],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8.5, 0.5, 5.5]},
+			"faces": {
+				"up": {"uv": [9, 10, 16, 15], "texture": "#0"},
+				"down": {"uv": [9, 10, 16, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6, 2.1, 2],
+			"to": [13, 2.11, 7],
+			"faces": {
+				"up": {"uv": [9, 5, 16, 10], "texture": "#0"},
+				"down": {"uv": [9, 15, 16, 10], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [28, 0, 0],
+			"translation": [-1.25, 4, 2.25],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [26, 0, 0],
+			"translation": [1.5, 3.25, 2.25],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"translation": [0, 6, 0],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"gui": {
+			"rotation": [37, -34, 0],
+			"translation": [-0.75, 5, 0]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, -9.5],
+			"scale": [1.2, 1.2, 1.2]
+		}
+	}
+}

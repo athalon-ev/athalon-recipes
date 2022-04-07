@@ -1,0 +1,12 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "item/shears"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 10000}, "model": "item/shears/10000" },
+		{ "predicate": { "custom_model_data": 10001}, "model": "item/shears/10001" },
+        { "predicate": { "custom_model_data": 10002}, "model": "item/shears/10002" },
+        { "predicate": { "custom_model_data": 10003}, "model": "item/shears/10003" }
+	]
+}

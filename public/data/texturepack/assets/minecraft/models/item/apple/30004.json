@@ -1,0 +1,110 @@
+{
+	"credit": "Made by Benedikt Drexelius",
+	"parent": "./cit_item",
+	"textures": {
+		"0": "item/apple/30004/0",
+		"1": "item/general/wood/16",
+		"particle": "item/apple/30004/0"
+	},
+	"elements": [
+		{
+			"from": [5.6312, -0.04316, 5.6312],
+			"to": [10.3688, 5.64196, 10.3688],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.47376, 7.537, 8.47376]},
+			"faces": {
+				"north": {"uv": [1, 7, 6, 13], "texture": "#0"},
+				"east": {"uv": [1, 7, 6, 13], "texture": "#0"},
+				"south": {"uv": [1, 7, 6, 13], "texture": "#0"},
+				"west": {"uv": [1, 7, 6, 13], "texture": "#0"},
+				"up": {"uv": [1, 1, 6, 6], "texture": "#0"},
+				"down": {"uv": [8, 1, 13, 6], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5.6312, 0.90436, 4.68368],
+			"to": [10.3688, 4.69444, 11.31632],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.47376, 7.537, 8.47376]},
+			"faces": {
+				"north": {"uv": [1, 8, 6, 12], "texture": "#0"},
+				"east": {"uv": [0, 8, 7, 12], "texture": "#0"},
+				"south": {"uv": [1, 8, 6, 12], "texture": "#0"},
+				"west": {"uv": [0, 8, 7, 12], "texture": "#0"},
+				"up": {"uv": [1, 0, 6, 7], "texture": "#0"},
+				"down": {"uv": [1, 10, 6, 12], "texture": "#0"}
+			}
+		},
+		{
+			"from": [4.68368, 0.90436, 5.6312],
+			"to": [11.31632, 4.69444, 10.3688],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.47376, 7.537, 8.47376]},
+			"faces": {
+				"north": {"uv": [0, 8, 7, 12], "texture": "#0"},
+				"east": {"uv": [1, 8, 6, 12], "texture": "#0"},
+				"south": {"uv": [0, 8, 7, 12], "texture": "#0"},
+				"west": {"uv": [1, 8, 6, 12], "texture": "#0"},
+				"up": {"uv": [0, 1, 7, 6], "texture": "#0"},
+				"down": {"uv": [1, 10, 6, 12], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7.52624, 5.64196, 7.52624],
+			"to": [8.47376, 13.22212, 8.47376],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.47376, 7.537, 8.47376]},
+			"faces": {
+				"north": {"uv": [15, 1, 16, 9], "texture": "#1"},
+				"east": {"uv": [15, 1, 16, 9], "texture": "#1"},
+				"south": {"uv": [15, 1, 16, 9], "texture": "#1"},
+				"west": {"uv": [15, 1, 16, 9], "texture": "#1"},
+				"up": {"uv": [15, 1, 16, 2], "texture": "#1"},
+				"down": {"uv": [15, 1, 16, 9], "texture": "#1"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-163, 0, 0],
+			"translation": [0, 2.5, 2],
+			"scale": [0.64063, 0.64063, 0.64063]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-163, 0, 0],
+			"translation": [0, 2.5, 2],
+			"scale": [0.64063, 0.64063, 0.64063]
+		},
+		"firstperson_righthand": {
+			"rotation": [146.75, 0, 9.75],
+			"translation": [0.5, 1.75, 0],
+			"scale": [0.65234, 0.65234, 0.65234]
+		},
+		"firstperson_lefthand": {
+			"rotation": [146.75, 0, 11.25],
+			"translation": [0.5, 1.75, 0],
+			"scale": [0.65234, 0.65234, 0.65234]
+		},
+		"ground": {
+			"translation": [0, 4.5, 0],
+			"scale": [0.7, 0.7, 0.7]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"translation": [0, 1.75, 0],
+			"scale": [0.75391, 0.75391, 0.75391]
+		},
+		"head": {
+			"translation": [0, 15.25, 0]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, -15],
+			"scale": [2, 2, 2]
+		}
+	},
+	"groups": [
+		{
+			"name": "Apple",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		}
+	]
+}

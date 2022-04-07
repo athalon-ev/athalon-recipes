@@ -1,0 +1,31 @@
+{
+    "parent": "item/handheld",
+	"textures": {
+		"layer0": "item/iron_sword/10010"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, -90, -15],
+			"translation": [0, 3.75, 6]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 90, -60],
+			"translation": [0, 6, -2.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [-13, 255, 45],
+			"translation": [2, 3, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [180, 110, 45],
+			"translation": [1, 0.25, 0]
+		},
+		"ground": {
+			"translation": [0, 8.5, 0]
+		},
+		"head": {
+			"rotation": [0, -90, -87],
+			"translation": [-7.25, -26.25, 1]
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/paper"
+    },
+	"overrides": [
+        { "predicate": { "custom_model_data": 10000}, "model": "item/paper/10000" },
+        { "predicate": { "custom_model_data": 20000}, "model": "item/paper/20000" },
+        { "predicate": { "custom_model_data": 20001}, "model": "item/paper/20001" },
+        { "predicate": { "custom_model_data": 20002}, "model": "item/paper/20002" },
+        { "predicate": { "custom_model_data": 20003}, "model": "item/paper/20003" },
+        { "predicate": { "custom_model_data": 20004}, "model": "item/paper/20004" },
+        { "predicate": { "custom_model_data": 20005}, "model": "item/paper/20005" },
+        { "predicate": { "custom_model_data": 20006}, "model": "item/paper/20006" },
+        { "predicate": { "custom_model_data": 20007}, "model": "item/paper/20007" },
+        { "predicate": { "custom_model_data": 20008}, "model": "item/paper/20008" },
+        { "predicate": { "custom_model_data": 20009}, "model": "item/paper/20009" },
+        { "predicate": { "custom_model_data": 20010}, "model": "item/paper/20010" },
+        { "predicate": { "custom_model_data": 20011}, "model": "item/paper/20011" },
+		{ "predicate": { "custom_model_data": 30000}, "model": "item/paper/30000" },
+        { "predicate": { "custom_model_data": 30001}, "model": "item/paper/30001" }
+	]
+}

@@ -1,0 +1,11 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "item/wooden_hoe"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 10000}, "model": "item/wooden_hoe/10000" },
+		{ "predicate": { "custom_model_data": 10001}, "model": "item/wooden_hoe/10001" },
+		{ "predicate": { "custom_model_data": 10002}, "model": "item/wooden_hoe/10002" }
+	]
+}

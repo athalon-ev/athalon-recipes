@@ -1,0 +1,64 @@
+{
+	"credit": "Made by Benedikt Drexelius",
+	"textures": {
+		"0": "item/general/metal/3"
+	},
+	"elements": [
+		{
+			"from": [4, 0.25, 8.25],
+			"to": [7, 0.75, 8.75],
+			"faces": {
+				"north": {"uv": [0, 0, 3, 0.5], "texture": "#0"},
+				"east": {"uv": [0, 0, 0.5, 0.5], "texture": "#0"},
+				"south": {"uv": [0, 0, 3, 0.5], "texture": "#0"},
+				"west": {"uv": [0, 0, 0.5, 0.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 3, 0.5], "texture": "#0"},
+				"down": {"uv": [0, 0, 3, 0.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7, 0, 8],
+			"to": [7.3, 1, 9],
+			"faces": {
+				"north": {"uv": [0, 0, 0.3, 1], "texture": "#0"},
+				"east": {"uv": [0, 0, 1, 1], "texture": "#0"},
+				"south": {"uv": [0, 0, 0.3, 1], "texture": "#0"},
+				"west": {"uv": [0, 0, 1, 1], "texture": "#0"},
+				"up": {"uv": [0, 0, 0.3, 1], "texture": "#0"},
+				"down": {"uv": [0, 0, 0.3, 1], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 0, -90],
+			"translation": [6, -0.5, 0],
+			"scale": [0.7, 0.7, 0.7]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 0, 90],
+			"translation": [-4.75, -0.5, 0],
+			"scale": [0.7, 0.7, 0.7]
+		},
+		"firstperson_righthand": {
+			"rotation": [47, -77, 0],
+			"translation": [4.25, 4, 6]
+		},
+		"firstperson_lefthand": {
+			"rotation": [51, 93, 0],
+			"translation": [3.5, 3.25, 6.5]
+		},
+		"ground": {
+			"translation": [0, 4.5, 0]
+		},
+		"gui": {
+			"rotation": [0, 64, 30],
+			"translation": [-2.5, 15, 0],
+			"scale": [2, 2, 2]
+		},
+		"fixed": {
+			"translation": [2.75, 8.5, -1],
+			"scale": [1.2, 1.2, 1.2]
+		}
+	}
+}
