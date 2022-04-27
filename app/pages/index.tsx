@@ -6,6 +6,8 @@ import getItems from 'app/recipes/queries/getItems'
 
 import ItemCraftingRecipeCard from 'app/recipes/components/ItemCraftingRecipeCard'
 
+const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
+
 const RecipeList = () => {
 	const [items] = useQuery(getItems, null)
 	const itemCategories = [
@@ -30,10 +32,10 @@ const RecipeList = () => {
 			</div>
 			{itemCategories.map((itemCategory) => (
 				<div key={itemCategory} id={itemCategory}>
-					<h2 className="text-xl m-4">
-						{itemCategory} -{' '}
-						{itemsWithCategories.filter((item) => item.category == itemCategory).length}{' '}
-						Rezepte{' '}
+					<h2 className="text-xl p-4 sticky z-10 bg-white top-16">
+						{capitalize(itemCategory)} -
+						{itemsWithCategories.filter((item) => item.category == itemCategory).length}
+						Rezepte
 					</h2>
 					<div className="flex flex-wrap">
 						{itemsWithCategories

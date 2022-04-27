@@ -8,11 +8,13 @@ interface ItemCraftingRecipeCardProps {
 	item: IndexedDenizenScript
 }
 
+const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
+
 const ItemCraftingRecipeCard = ({ item, items }: ItemCraftingRecipeCardProps) => {
 	const [hash] = useHash()
 	return (
 		<div className="p-4 w-1/4" id={item.id}>
-			{item.id.replaceAll('_', ' ').split(' ').slice(1).join(' ')}
+			{item.id.replaceAll('_', ' ').split(' ').slice(1).join(' ').split(/(?=[A-Z])/).map(capitalize).join(' ')}
 			<div
 				className={`${hash.replace('#', '') == item.id ? 'bg-blue-400' : 'bg-gray-300'} p-4 rounded`}
 			>

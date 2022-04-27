@@ -8,9 +8,8 @@ const UserInfo = () => {
 
 	if (currentUser) {
 		return (
-			<>
+			<div className="flex">
 				<button
-					className="button small"
 					onClick={async () => {
 						await logoutMutation()
 					}}
@@ -19,10 +18,9 @@ const UserInfo = () => {
 				</button>
 				<div>
 					User id: <code>{currentUser.id}</code>
-					<br />
 					User role: <code>{currentUser.role}</code>
 				</div>
-			</>
+			</div>
 		)
 	} else {
 		return (

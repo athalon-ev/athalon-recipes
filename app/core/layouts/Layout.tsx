@@ -11,7 +11,7 @@ const Layout: BlitzLayout<{ title?: string }> = ({ title, children }) => {
 				</title>
 				<link rel="icon" href="/favicon.png" />
 			</Head>
-			<nav className="flex justify-between items-center bg-blue-600 text-white px-4">
+			<nav className="flex justify-between items-center bg-blue-600 text-white z-50 px-4 sticky top-0">
 				<div className="flex items-stretch py-4 text-xl font-bold">
 					<Image
 						src="/data/texturepack/assets/minecraft/textures/item/writable_book.png"
