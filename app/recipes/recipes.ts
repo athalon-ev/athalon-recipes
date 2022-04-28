@@ -1,4 +1,4 @@
-import * as fs from 'fs/promises'
+import * as fs from 'fs-extra'
 import * as yaml from 'yaml'
 import * as path from 'path'
 import type {

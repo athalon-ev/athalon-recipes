@@ -1,52 +1,22 @@
 import { Suspense } from 'react'
 import { BlitzPage } from 'blitz'
 import Layout from 'app/core/layouts/Layout'
-import { useQuery, Image } from 'blitz'
+import { useQuery } from 'blitz'
 import getItems from 'app/recipes/queries/getItems'
 
 import ItemCraftingRecipeCard from 'app/recipes/components/ItemCraftingRecipeCard'
-
-const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
+import ItemCategories from 'app/recipes/components/ItemCategories'
+import ItemCategoriesMenu from 'app/recipes/components/ItemCategoriesMenu'
 
 const RecipeList = () => {
 	const [items] = useQuery(getItems, null)
-	const itemCategories = [
-		...new Set(items.map((item) => item.id.split('_')[0] || 'uncategorized')),
-	]
-	const itemsWithCategories = items.map((item) => ({
-		...item,
-		category: item.id.split('_')[0] || 'uncategorized',
-	}))
 	return (
 		<div>
-			<div className="flex m-4">
-				{itemCategories.map((itemCategory) => (
-					<a
-						className="mr-2 px-2 py-1 rounded hover:bg-blue-600"
-						key={itemCategory}
-						href={`#${itemCategory}`}
-					>
-						{itemCategory}
-					</a>
-				))}
-			</div>
-			{itemCategories.map((itemCategory) => (
-				<div key={itemCategory} id={itemCategory}>
-					<h2 className="text-xl p-4 sticky z-10 bg-white top-16">
-						{capitalize(itemCategory)} -
-						{itemsWithCategories.filter((item) => item.category == itemCategory).length}
-						Rezepte
-					</h2>
-					<div className="flex flex-wrap">
-						{itemsWithCategories
-							.filter((item) => item.category == itemCategory)
-							.sort((a, b) => a.id.localeCompare(b.id))
-							.map((item) => (
-								<ItemCraftingRecipeCard key={item.id} item={item} items={items} />
-							))}
-					</div>
-				</div>
-			))}
+			<ItemCategoriesMenu items={items} />
+			<ItemCategories
+				items={items}
+				itemCard={({ item, items }) => <ItemCraftingRecipeCard key={item.id} item={item} items={items} />}
+			/>
 		</div>
 	)
 }

@@ -1,3 +1,7 @@
+export interface ItemConfig {
+	hiddenItems: string[]
+}
+
 export interface DenizenUnparsedRecipeShapeless {
 	type: 'shapeless'
 	input: string
@@ -24,8 +28,8 @@ export type DenizenUnparsedRecipe =
 	| DenizenUnparsedRecipeShaped
 	| DenizenUnparsedRecipeFurnace
 	| (DenizenUnparsedRecipeStonecutting & {
-			output_quantity: number
-	  })
+		output_quantity: number
+	})
 
 export interface DenizenRecipeShapeless {
 	type: 'shapeless'
