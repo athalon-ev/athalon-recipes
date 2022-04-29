@@ -1,6 +1,7 @@
 import { Tooltip } from '@mantine/core'
 import { Image } from 'blitz'
 import { IndexedDenizenScript } from '../types'
+import PotionItem from './PotionItem'
 
 const colorCodeMap = new Map([
 	['0', '#000000'],
@@ -73,13 +74,16 @@ const ItemDisplay = ({ item, hideName, hideLore }: ItemDisplayProps) => {
 			}
 		>
 			<div className="rounded-md border-2 border-purple-800 bg-gray-900 p-2 text-white">
-				<Image
-					src={item.filepath}
-					alt={item['display name']}
-					width={16}
-					height={16}
-					layout="fixed"
-				/>
+				{item.material != 'potion'
+					? <Image
+						src={item.filepath}
+						alt={item['display name']}
+						width={16}
+						height={16}
+						layout="fixed"
+					/>
+					: <PotionItem color="red" />
+				}
 				{hideName || <span className="ml-2" dangerouslySetInnerHTML={{ __html: name }} />}
 				{hideLore || <div dangerouslySetInnerHTML={{ __html: lore }} />}
 			</div>
