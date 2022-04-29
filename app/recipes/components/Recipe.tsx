@@ -12,41 +12,47 @@ interface RecipeProps {
 	item: IndexedDenizenScript
 }
 
+interface RecipeItemDisplayProps {
+	input: string
+	items: IndexedDenizenScript[]
+}
+
+
+const RecipeItemDisplay = (props: RecipeItemDisplayProps) => {
+	const findItem = (itemId: string) => props.items.find((item) => item.id === itemId)
+	const item = findItem(props.input)
+	if (!item) return <></>
+	return <a href={`#${findItem(props.input)?.id}`} className="w-1/3 p-2">
+		<ItemDisplay hideName hideLore item={item} />
+	</a>
+}
+
 const Recipe = memo((props: RecipeProps) => {
 	const inputs = Array.isArray(props.recipe.input) ? props.recipe.input : [props.recipe.input]
-	const findItem = (itemId: string) => props.items.find((item) => item.id === itemId)
 	// "shapeless" | "shaped" | "furnace" | "stonecutting
 	const RecipeTypeDisplay = {
 		shapeless: (<>
 			{inputs.map((input, id) => (
-				<a href={`#${findItem(input)?.id}`} className="w-1/3 p-2" key={id}>
-					{findItem(input) && <ItemDisplay hideName hideLore item={findItem(input)} />}
-				</a>
+				<RecipeItemDisplay key={id} input={input} items={props.items} />
 			))}
 		</>),
 		shaped: (<>
 			{inputs.map((input, id) => (
 				<div className="flex flex-wrap" key={id}>
 					{Array.isArray(input) && input.map((i, id) => (
-						<a href={`#${findItem(i)?.id}`} className="w-1/3 p-2" key={id}>
-							{findItem(i) && <ItemDisplay hideName hideLore item={findItem(i)} />}
-						</a>
+						<RecipeItemDisplay key={id} input={i} items={props.items} />
 					))}
 				</div>
 			))}
 		</>),
 		furnace: (<div>
 			{inputs.map((input, id) => (
-				<a href={`#${findItem(input)?.id}`} className="w-1/3 p-2" key={id}>
-					{findItem(input) && <ItemDisplay hideName hideLore item={findItem(input)} />}
-				</a>
+				<RecipeItemDisplay key={id} input={input} items={props.items} />
 			))}
 		</div>),
 		stonecutting: (<div>
 			{inputs.map((input, id) => (
-				<a href={`#${findItem(input)?.id}`} className="w-1/3 p-2" key={id}>
-					{findItem(input) && <ItemDisplay hideName hideLore item={findItem(input)} />}
-				</a>
+				<RecipeItemDisplay key={id} input={input} items={props.items} />
 			))}
 		</div>),
 	}
