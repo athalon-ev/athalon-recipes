@@ -1,12 +1,9 @@
 import { Ctx } from 'blitz'
 import { getItems } from 'app/recipes/recipes'
-import * as path from 'path'
 import { IndexedDenizenScript, ItemConfig } from '../types'
 import { readJson } from 'fs-extra'
+import { itemConfigPath, itemsPath, recipesPath } from 'app/paths'
 
-const recipesPath = path.resolve(__dirname, '../../../../../public/data/recipes')
-const itemConfigPath = path.resolve(__dirname, '../../../../../public/data/itemconfig.json')
-const itemsPath = '/data/texturepack/assets/minecraft/textures/item'
 
 let recipes: IndexedDenizenScript[] = []
 

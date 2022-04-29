@@ -25,7 +25,6 @@ const parseDenizenScriptMaterial = (material: string): Partial<DenizenScript> =>
 }
 
 const parseDenizenScript = (script: DenizenUnparsedScript): DenizenScript => {
-	console.log({ script })
 	return {
 		...script,
 		...parseDenizenScriptMaterial(script.material),
