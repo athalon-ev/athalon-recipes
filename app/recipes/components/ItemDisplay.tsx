@@ -45,12 +45,14 @@ const translateColor = (colorCode, string) => `
 const translateColorCode = (colorCode) => colorCodeMap.get(colorCode) || 'White'
 
 interface ItemDisplayProps {
-	item: IndexedDenizenScript | undefined
+	item: IndexedDenizenScript
 	hideName?: boolean
 	hideLore?: boolean
 }
 
 const ItemDisplay = ({ item, hideName, hideLore }: ItemDisplayProps) => {
+	const plainColor = item.color?.replace('co@', '')
+	const color = plainColor?.match(/\d/) ? `rgb(${plainColor})` : plainColor
 	if (!item) return <></>
 	const name = renderMinecraftStringToHtml(
 		typeof item['display name'] == 'string' ? item['display name'] : ''
@@ -67,9 +69,9 @@ const ItemDisplay = ({ item, hideName, hideLore }: ItemDisplayProps) => {
 			label={
 				<>
 					{hideName && (
-						<span className="ml-2" dangerouslySetInnerHTML={{ __html: name }} />
+						<span dangerouslySetInnerHTML={{ __html: name }} />
 					)}
-					<div dangerouslySetInnerHTML={{ __html: lore }} />
+					{lore && <div dangerouslySetInnerHTML={{ __html: lore }} />}
 				</>
 			}
 		>
@@ -82,7 +84,7 @@ const ItemDisplay = ({ item, hideName, hideLore }: ItemDisplayProps) => {
 						height={16}
 						layout="fixed"
 					/>
-					: <PotionItem color="red" />
+					: <PotionItem color={color} />
 				}
 				{hideName || <span className="ml-2" dangerouslySetInnerHTML={{ __html: name }} />}
 				{hideLore || <div dangerouslySetInnerHTML={{ __html: lore }} />}
