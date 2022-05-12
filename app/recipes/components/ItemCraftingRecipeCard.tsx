@@ -36,7 +36,7 @@ const ItemCraftingRecipeCard = memo(({ item, items, children, ...props }: ItemCr
 				<ItemDisplay item={item} />
 				{item.recipes.map((recipe, id) => (
 					<div key={id}>
-						Rezept {id + 1}
+						Rezept {id + 1} ({recipe.type})
 						<Recipe items={items} recipe={recipe} item={item} />
 					</div>
 				))}
