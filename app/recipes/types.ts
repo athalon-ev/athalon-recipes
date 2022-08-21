@@ -23,13 +23,14 @@ export interface DenizenUnparsedRecipeStonecutting {
 	input: string
 }
 
-export type DenizenUnparsedRecipe =
+export type DenizenUnparsedRecipe = (
 	| DenizenUnparsedRecipeShapeless
 	| DenizenUnparsedRecipeShaped
 	| DenizenUnparsedRecipeFurnace
-	| (DenizenUnparsedRecipeStonecutting & {
-		output_quantity: number
-	})
+	| DenizenUnparsedRecipeStonecutting
+) & {
+	output_quantity: number
+}
 
 export interface DenizenRecipeShapeless {
 	type: 'shapeless'

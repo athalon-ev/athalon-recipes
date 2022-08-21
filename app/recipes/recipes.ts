@@ -24,13 +24,11 @@ const parseDenizenScriptMaterial = (material: string): Partial<DenizenScript> =>
 	}
 }
 
-const parseDenizenScript = (script: DenizenUnparsedScript): DenizenScript => {
-	return {
-		...script,
-		...parseDenizenScriptMaterial(script.material),
-		recipes: Object.values(script.recipes || {}).map((a) => parseDenizenRecipe(a)),
-	}
-}
+const parseDenizenScript = (script: DenizenUnparsedScript): DenizenScript => ({
+	...script,
+	...parseDenizenScriptMaterial(script.material),
+	recipes: Object.values(script.recipes || {}).map((a) => parseDenizenRecipe(a)),
+})
 
 const craftingSeparator = '|'
 

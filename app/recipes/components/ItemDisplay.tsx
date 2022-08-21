@@ -48,9 +48,10 @@ interface ItemDisplayProps {
 	item: IndexedDenizenScript
 	hideName?: boolean
 	hideLore?: boolean
+	children?: React.ReactNode
 }
 
-const ItemDisplay = ({ item, hideName, hideLore }: ItemDisplayProps) => {
+const ItemDisplay = ({ item, hideName, hideLore, children }: ItemDisplayProps) => {
 	const plainColor = item.color?.replace('co@', '')
 	const color = plainColor?.match(/\d/) ? `rgb(${plainColor})` : plainColor
 	if (!item) return <></>
@@ -88,6 +89,7 @@ const ItemDisplay = ({ item, hideName, hideLore }: ItemDisplayProps) => {
 				}
 				{hideName || <span className="ml-2" dangerouslySetInnerHTML={{ __html: name }} />}
 				{hideLore || <div dangerouslySetInnerHTML={{ __html: lore }} />}
+				{children}
 			</div>
 		</Tooltip>
 	)

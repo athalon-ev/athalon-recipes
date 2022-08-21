@@ -79,7 +79,11 @@ const Recipe = memo((props: RecipeProps) => {
 					</p>
 				</Tooltip>
 				<div className="p-4">
-					<ItemDisplay hideName hideLore item={props.item} />
+					<ItemDisplay hideName hideLore item={props.item}>
+						{props.recipe.output_quantity > 1 && <>
+							&times;{props.recipe.output_quantity}
+						</>}
+					</ItemDisplay>
 				</div>
 			</div>
 		</div>
