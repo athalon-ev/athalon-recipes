@@ -1,48 +1,48 @@
-import { Tooltip } from "@mantine/core"
-import { Image } from "blitz"
-import { IndexedDenizenScript } from "../types"
-import PotionItem from "./PotionItem"
+import { Tooltip } from '@mantine/core'
+import { Image } from 'blitz'
+import { IndexedDenizenScript } from '../types'
+import PotionItem from './PotionItem'
 
 const colorCodeMap = new Map([
-	["0", "#000000"],
-	["1", "#0000AA"],
-	["2", "#00AA00"],
-	["3", "#00AAAA"],
-	["4", "#AA0000"],
-	["5", "#AA00AA"],
-	["6", "#FFAA00"],
-	["7", "#AAAAAA"],
-	["8", "#555555"],
-	["9", "#5555FF"],
-	["a", "#55FF55"],
-	["b", "#55FFFF"],
-	["c", "#FF5555"],
-	["d", "#FF55FF"],
-	["e", "#FFFF55"],
-	["f", "#FFFFFF"],
+	['0', '#000000'],
+	['1', '#0000AA'],
+	['2', '#00AA00'],
+	['3', '#00AAAA'],
+	['4', '#AA0000'],
+	['5', '#AA00AA'],
+	['6', '#FFAA00'],
+	['7', '#AAAAAA'],
+	['8', '#555555'],
+	['9', '#5555FF'],
+	['a', '#55FF55'],
+	['b', '#55FFFF'],
+	['c', '#FF5555'],
+	['d', '#FF55FF'],
+	['e', '#FFFF55'],
+	['f', '#FFFFFF'],
 ])
 
 const renderMinecraftStringToHtml = (name: string) =>
 	name
-		.replaceAll("<yellow>", "<&e>")
-		.replaceAll("<dark_gray>", "<&8>")
-		.replaceAll("<dark_red>", "<&4>")
-		.replaceAll("<red>", "<&c>")
-		.replaceAll("<gold>", "<&6>")
-		.replaceAll("<gray>", "<&7>")
-		.replaceAll("&lb", "[")
-		.replaceAll("&rb", "]")
-		.replaceAll(/\n/g, "<br />")
+		.replaceAll('<yellow>', '<&e>')
+		.replaceAll('<dark_gray>', '<&8>')
+		.replaceAll('<dark_red>', '<&4>')
+		.replaceAll('<red>', '<&c>')
+		.replaceAll('<gold>', '<&6>')
+		.replaceAll('<gray>', '<&7>')
+		.replaceAll('&lb', '[')
+		.replaceAll('&rb', ']')
+		.replaceAll(/\n/g, '<br />')
 		.split(/<&/)
 		.map((element) => translateColor(element.substring(0, 1), element.slice(2)))
-		.join("")
+		.join('')
 
 const translateColor = (colorCode, string) => `
     <span style="color:${translateColorCode(colorCode)}">
-            ${string.replace(/ /g, "&nbsp;")}
+            ${string.replace(/ /g, '&nbsp;')}
     </span>
 `
-const translateColorCode = (colorCode) => colorCodeMap.get(colorCode) || "White"
+const translateColorCode = (colorCode) => colorCodeMap.get(colorCode) || 'White'
 
 interface ItemDisplayProps {
 	item: IndexedDenizenScript
@@ -52,15 +52,15 @@ interface ItemDisplayProps {
 }
 
 const ItemDisplay = ({ item, hideName, hideLore, children }: ItemDisplayProps) => {
-	const plainColor = item.color?.replace("co@", "")
+	const plainColor = item.color?.replace('co@', '')
 	const color = plainColor?.match(/\d/) ? `rgb(${plainColor})` : plainColor
 	if (!item) return <></>
 	const name = renderMinecraftStringToHtml(
-		typeof item["display name"] == "string" ? item["display name"] : ""
+		typeof item['display name'] == 'string' ? item['display name'] : ''
 	)
-	const lore = (typeof item.lore == "string" ? item.lore.split("\n") : item.lore || [])
+	const lore = (typeof item.lore == 'string' ? item.lore.split('\n') : item.lore || [])
 		.map(renderMinecraftStringToHtml)
-		.join("<br />")
+		.join('<br />')
 	return (
 		<Tooltip
 			withArrow
@@ -75,10 +75,10 @@ const ItemDisplay = ({ item, hideName, hideLore, children }: ItemDisplayProps) =
 			}
 		>
 			<div className="rounded-md border-2 border-purple-800 bg-gray-900 p-2 text-white">
-				{item.material != "potion" ? (
+				{item.material != 'potion' ? (
 					<Image
 						src={item.filepath}
-						alt={item["display name"]}
+						alt={item['display name']}
 						width={16}
 						height={16}
 						layout="fixed"
