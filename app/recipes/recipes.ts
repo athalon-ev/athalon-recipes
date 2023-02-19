@@ -27,7 +27,7 @@ const parseDenizenScriptMaterial = (material: string): Partial<DenizenScript> =>
 const parseDenizenScript = (script: DenizenUnparsedScript): DenizenScript => ({
 	...script,
 	...parseDenizenScriptMaterial(script.material),
-	recipes: Object.values(script.recipes || {}).map((a) => parseDenizenRecipe(a)),
+	recipes: Object.values(script.recipes || {}).map(parseDenizenRecipe),
 })
 
 const craftingSeparator = '|'
