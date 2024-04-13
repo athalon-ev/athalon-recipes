@@ -48,19 +48,21 @@ const RecipeItemDisplay = (props: RecipeItemDisplayProps) => {
 			</div>
 		)
 	}
-	return <a href={`#${findItem(props.input)?.id}`} className="w-1/3">
-		<ItemDisplay hideName hideLore item={item} />
-	</a>
+	return (
+		<a href={`#${findItem(props.input)?.id}`} className="w-1/3">
+			<ItemDisplay hideName hideLore item={item} />
+		</a>
+	)
 }
 
 export const getType = (type: string) =>
-({
-	shapeless: 'Formlos',
-	shaped: 'Form',
-	furnace: 'Ofen',
-	blast: 'Blast Ofen',
-	stonecutting: 'Steinschneider',
-}[type])
+	({
+		shapeless: 'Formlos',
+		shaped: 'Form',
+		furnace: 'Ofen',
+		blast: 'Blast Ofen',
+		stonecutting: 'Steinschneider',
+	}[type])
 
 const Recipe = memo((props: RecipeProps) => {
 	const inputs = Array.isArray(props.recipe.input) ? props.recipe.input : [props.recipe.input]
