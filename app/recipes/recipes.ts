@@ -43,7 +43,12 @@ const parseDenizenRecipeInput = (recipe: DenizenUnparsedRecipe) => {
 const getItemPicturePath = (itemFolderPath: string, item: DenizenScript) =>
 	path.join(
 		itemFolderPath,
-		`${item.material}${item.custom_model_data ? `/${item.custom_model_data}` : ''}.png`
+		`${item.material}${item.mechanisms?.custom_model_data ? `/${item.mechanisms.custom_model_data}` : ''}.png`
+	)
+const getFallbackItemPicturePath = (itemFolderPath: string, item: DenizenScript) =>
+	path.join(
+		itemFolderPath,
+		`${item.material}.png`
 	)
 
 // @ts-ignore
@@ -64,6 +69,7 @@ const parseDenizenScripts = (itemFolderPath: string, scripts: string[]): Indexed
 		.map((script) => ({
 			...script,
 			filepath: getItemPicturePath(itemFolderPath, script),
+			fallbackFilepath: getFallbackItemPicturePath(itemFolderPath, script),
 		}))
 
 export const getItemsByRecipeInput = (

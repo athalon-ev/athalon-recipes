@@ -1,5 +1,4 @@
 import { Tooltip } from '@mantine/core'
-import { Image } from 'blitz'
 import { IndexedDenizenScript } from '../types'
 import PotionItem from './PotionItem'
 
@@ -49,12 +48,14 @@ interface ItemDisplayProps {
 	hideName?: boolean
 	hideLore?: boolean
 	children?: React.ReactNode
+	tooltipChildren?: React.ReactNode
+	className?: string
 }
 
-const ItemDisplay = ({ item, hideName, hideLore, children }: ItemDisplayProps) => {
+const ItemDisplay = ({ item, hideName, hideLore, children, className, tooltipChildren }: ItemDisplayProps) => {
 	const plainColor = item.color?.replace('co@', '')
 	const color = plainColor?.match(/\d/) ? `rgb(${plainColor})` : plainColor
-	if (!item) return <></>
+	if (!item) return <>%</>
 	const name = renderMinecraftStringToHtml(
 		typeof item['display name'] == 'string' ? item['display name'] : ''
 	)
@@ -72,6 +73,7 @@ const ItemDisplay = ({ item, hideName, hideLore, children }: ItemDisplayProps) =
 	return (
 		<Tooltip
 			withArrow
+			allowPointerEvents
 			arrowSize={3}
 			position="bottom"
 			placement="start"
@@ -79,22 +81,24 @@ const ItemDisplay = ({ item, hideName, hideLore, children }: ItemDisplayProps) =
 				<>
 					{hideName && <span dangerouslySetInnerHTML={{ __html: name }} />}
 					{lore && <div dangerouslySetInnerHTML={{ __html: lore }} />}
+					{tooltipChildren}
 				</>
 			}
 		>
-			<div className="rounded-md border-2 border-purple-800 bg-gray-900 p-2 text-white">
-				{item.material != 'potion' ? (
-					<Image
-						src={item.filepath}
-						alt={item['display name']}
-						width={16}
-						height={16}
-						layout="fixed"
-					/>
-				) : (
-					<PotionItem color={color} />
-				)}
-				{hideName || <span className="ml-2" dangerouslySetInnerHTML={{ __html: name }} />}
+			<div className={`rounded-md border-2 border-purple-800 bg-gray-900 p-2 text-white ${className}`}>
+				<div className="flex items-center">
+					{item.material != 'potion' ? (
+						<img
+							src={item.filepath}
+							alt={item['display name']}
+							width={16}
+							height={16}
+						/>
+					) : (
+						<PotionItem color={color} />
+					)}
+					{hideName || <span className="ml-2" dangerouslySetInnerHTML={{ __html: name }} />}
+				</div>
 				{hideLore || <div dangerouslySetInnerHTML={{ __html: lore }} />}
 				{children}
 			</div>

@@ -20,8 +20,24 @@ interface RecipeItemDisplayProps {
 const RecipeItemDisplay = (props: RecipeItemDisplayProps) => {
 	const findItem = (itemId: string) => props.items.find((item) => item.id === itemId)
 	const item = findItem(props.input)
-
-	if (!item) return <>-</>
+	if (!item) {
+		const search = new RegExp(props.input.replaceAll('*', '.*?'))
+		const altItems = props.items.filter(item => item.id.match(search))
+		if (!altItems.length) return <div className="w-1/3 rounded-md border-2 border-purple-800 bg-gray-900 w-9 h-9">
+		</div>
+		return <div className="w-1/3">
+			<ItemDisplay hideName hideLore item={altItems[0]} tooltipChildren={<>
+				<hr />
+				<div>Alternativen</div>
+				<div className="flex flex-wrap gap-4">
+					{altItems.slice(1).map(item => <ItemDisplay key={item.id} hideName hideLore item={item} />)}
+				</div>
+			</>} />
+		</div>
+		// return <a href={`#${findItem(props.input)?.id}`} className="w-1/3">
+		// 	<ItemDisplay hideName hideLore item={item} />
+		// </a>
+	}
 	return (
 		<a href={`#${findItem(props.input)?.id}`} className="w-1/3">
 			<ItemDisplay hideName hideLore item={item} />
@@ -30,13 +46,13 @@ const RecipeItemDisplay = (props: RecipeItemDisplayProps) => {
 }
 
 export const getType = (type: string) =>
-	({
-		shapeless: 'Formlos',
-		shaped: 'Form',
-		furnace: 'Ofen',
-		blast: 'Blast Ofen',
-		stonecutting: 'Steinschneider',
-	}[type])
+({
+	shapeless: 'Formlos',
+	shaped: 'Form',
+	furnace: 'Ofen',
+	blast: 'Blast Ofen',
+	stonecutting: 'Steinschneider',
+}[type])
 
 const Recipe = memo((props: RecipeProps) => {
 	const inputs = Array.isArray(props.recipe.input) ? props.recipe.input : [props.recipe.input]
@@ -52,12 +68,10 @@ const Recipe = memo((props: RecipeProps) => {
 		shaped: (
 			<>
 				{inputs.map((input, id) => (
-					<div className="flex flex-wrap" key={id}>
-						{Array.isArray(input) &&
-							input.map((i, id) => (
-								<RecipeItemDisplay key={id} input={i} items={props.items} />
-							))}
-					</div>
+					Array.isArray(input) &&
+					input.map((i, id) => (
+						<RecipeItemDisplay key={id} input={i} items={props.items} />
+					))
 				))}
 			</>
 		),

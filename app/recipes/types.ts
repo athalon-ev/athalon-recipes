@@ -83,10 +83,11 @@ export interface DenizenScriptBase {
 	color: string
 	no_id?: boolean
 	material: string
-	mechanisms: any
+	mechanisms?: {
+		custom_model_data: string
+	}
 	'display name': string
 	lore: string | (string | Record<string, string>)[]
-	custom_model_data: string
 	recipes: Record<string, any>
 }
 
@@ -97,6 +98,7 @@ export interface DenizenScript extends DenizenScriptBase {
 export interface IndexedDenizenScript extends DenizenScript {
 	id: string
 	filepath: string
+	fallbackFilepath: string
 }
 
 export interface DenizenUnparsedScript extends DenizenScriptBase {

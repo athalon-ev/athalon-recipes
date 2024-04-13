@@ -12,7 +12,6 @@ import { SearchContext } from 'app/core/searchContext'
 
 const RecipeList = () => {
 	const search = useContext(SearchContext)
-	console.log({ search })
 	const [items] = useQuery(getItems, null)
 	const filteredItems = search.length
 		? items.filter((item) =>
