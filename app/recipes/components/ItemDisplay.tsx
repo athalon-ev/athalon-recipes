@@ -63,10 +63,10 @@ const ItemDisplay = ({ item, hideName, hideLore, children }: ItemDisplayProps) =
 			typeof line == 'string'
 				? renderMinecraftStringToHtml(line)
 				: renderMinecraftStringToHtml(
-						Object.entries(line)
-							.map((l) => l.join(': '))
-							.join('')
-				  )
+					Object.entries(line)
+						.map((l) => l.join(': '))
+						.join('')
+				)
 		)
 		.join('<br />')
 	return (

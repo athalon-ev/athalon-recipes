@@ -16,8 +16,8 @@ const RecipeList = () => {
 	const [items] = useQuery(getItems, null)
 	const filteredItems = search.length
 		? items.filter((item) =>
-				(item['display name'] ?? '').toLowerCase().includes(search.toLowerCase())
-		  )
+			(item['display name'] ?? '').toLowerCase().includes(search.toLowerCase())
+		)
 		: items
 	return (
 		<AppShell
