@@ -26,7 +26,7 @@ const RecipeItemDisplay = (props: RecipeItemDisplayProps) => {
 		if (!altItems.length) return <div className="w-1/3 rounded-md border-2 border-purple-800 bg-gray-900 w-9 h-9">
 		</div>
 		return <div className="w-1/3">
-			<ItemDisplay hideName hideLore item={altItems[0]} tooltipChildren={<>
+			<ItemDisplay hideName hideLore item={altItems[0]!} tooltipChildren={<>
 				<hr />
 				<div>Alternativen</div>
 				<div className="flex flex-wrap gap-4">
