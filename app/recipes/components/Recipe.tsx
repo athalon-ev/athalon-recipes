@@ -59,13 +59,13 @@ const RecipeItemDisplay = (props: RecipeItemDisplayProps) => {
 }
 
 export const getType = (type: string) =>
-({
-	shapeless: 'Formlos',
-	shaped: 'Form',
-	furnace: 'Ofen',
-	blast: 'Blast Ofen',
-	stonecutting: 'Steinschneider',
-}[type])
+	({
+		shapeless: 'Formlos',
+		shaped: 'Form',
+		furnace: 'Ofen',
+		blast: 'Blast Ofen',
+		stonecutting: 'Steinschneider',
+	}[type])
 
 const Recipe = memo((props: RecipeProps) => {
 	const inputs = Array.isArray(props.recipe.input) ? props.recipe.input : [props.recipe.input]
