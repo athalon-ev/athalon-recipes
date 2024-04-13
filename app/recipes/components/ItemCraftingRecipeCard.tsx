@@ -1,7 +1,7 @@
 import { useHash } from '@mantine/hooks'
 import { IndexedDenizenScript } from '../types'
 import ItemDisplay from './ItemDisplay'
-import Recipe from './Recipe'
+import Recipe, { getType } from './Recipe'
 import { useClipboard } from '@mantine/hooks'
 import { Tooltip } from '@mantine/core'
 import { memo } from 'react'
@@ -19,7 +19,9 @@ const ItemCraftingRecipeCard = memo(
 		const clipboard = useClipboard()
 		return (
 			<div
-				className={`relative p-4 w-full md:w-1/2 lg:w-1/3 2xl:w-1/4 ${props.className || ''}`}
+				className={`relative p-4 w-full md:w-1/2 lg:w-1/3 2xl:w-1/4 ${
+					props.className || ''
+				}`}
 			>
 				<a className="inline-block relative -top-32 invisible" id={item.id} />
 				<div className="flex justify-between">
@@ -52,13 +54,15 @@ const ItemCraftingRecipeCard = memo(
 					</Tooltip>
 				</div>
 				<div
-					className={`${hash.replace('#', '') == item.id ? 'bg-blue-400' : 'bg-gray-300'} p-4 rounded`}
+					className={`${
+						hash.replace('#', '') == item.id ? 'bg-blue-400' : 'bg-gray-300'
+					} p-4 rounded`}
 					onClick={props.onClick}
 				>
 					<ItemDisplay item={item} />
 					{item.recipes.map((recipe, id) => (
 						<div key={id}>
-							Rezept {id + 1} ({recipe.type})
+							Rezept {id + 1} ({getType(recipe.type)})
 							<Recipe items={items} recipe={recipe} item={item} />
 						</div>
 					))}

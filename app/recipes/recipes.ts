@@ -52,7 +52,7 @@ const parseDenizenRecipe = (recipe: DenizenUnparsedRecipe): DenizenRecipe => ({
 	...parseDenizenRecipeInput(recipe),
 })
 
-const parseDenizenScripts = (itemFolderPath, scripts: string[]): IndexedDenizenScript[] =>
+const parseDenizenScripts = (itemFolderPath: string, scripts: string[]): IndexedDenizenScript[] =>
 	Object.entries(
 		scripts
 			.map((c) => yaml.parse(c))

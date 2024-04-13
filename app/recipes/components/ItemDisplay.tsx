@@ -22,7 +22,7 @@ const colorCodeMap = new Map([
 	['f', '#FFFFFF'],
 ])
 
-const renderMinecraftStringToHtml = (name: string) =>
+export const renderMinecraftStringToHtml = (name: string) =>
 	name
 		.replaceAll('<yellow>', '<&e>')
 		.replaceAll('<dark_gray>', '<&8>')
@@ -59,7 +59,15 @@ const ItemDisplay = ({ item, hideName, hideLore, children }: ItemDisplayProps) =
 		typeof item['display name'] == 'string' ? item['display name'] : ''
 	)
 	const lore = (typeof item.lore == 'string' ? item.lore.split('\n') : item.lore || [])
-		.map(renderMinecraftStringToHtml)
+		.map((line) =>
+			typeof line == 'string'
+				? renderMinecraftStringToHtml(line)
+				: renderMinecraftStringToHtml(
+						Object.entries(line)
+							.map((l) => l.join(': '))
+							.join('')
+				  )
+		)
 		.join('<br />')
 	return (
 		<Tooltip

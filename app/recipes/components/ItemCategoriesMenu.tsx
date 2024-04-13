@@ -1,15 +1,30 @@
-import { getItemCategories } from '../items'
+import { useHash } from '@mantine/hooks'
+import { getItemCategories, getItemsWithCategories } from '../items'
 import { IndexedDenizenScript } from '../types'
+import ItemDisplay, { renderMinecraftStringToHtml } from './ItemDisplay'
 
-const ItemCategoriesMenu = ({ items }: { items: IndexedDenizenScript[] }) => <div className="flex m-4">
-	{getItemCategories(items).map((itemCategory) => (
-		<a
-			className="mr-2 px-2 py-1 rounded hover:bg-blue-600"
-			key={itemCategory}
-			href={`#${itemCategory}`}
-		>
-			{itemCategory}
-		</a>
-	))}
-</div>
+const ItemCategoriesMenu = ({ items }: { items: IndexedDenizenScript[] }) => {
+	const [hash] = useHash()
+	const itemsWithCategories = getItemsWithCategories(items)
+	return (
+		<div>
+			{getItemCategories(items).map((itemCategory) => {
+				return (
+					<div key={itemCategory}>
+						<a
+							className={`
+								block px-4 py-1
+								hover:bg-blue-500 hover:text-white
+								${hash.slice(1) == itemCategory && 'bg-blue-600 text-white'}
+							`}
+							href={`#${itemCategory}`}
+						>
+							{itemCategory}
+						</a>
+					</div>
+				)
+			})}
+		</div>
+	)
+}
 export default ItemCategoriesMenu
